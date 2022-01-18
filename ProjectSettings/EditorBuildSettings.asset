@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lake.unity
     guid: c92d2223cdf756e468166d7bf7d26bd5
+  - enabled: 1
+    path: Assets/Scenes/orchard.unity
+    guid: 0c910b75179656049990ab5384380f85
   m_configObjects: {}
