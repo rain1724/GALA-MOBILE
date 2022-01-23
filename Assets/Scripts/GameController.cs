@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] Camera worldCamera;
 
+
     GameState state;
     GameState stateBeforePause;
 

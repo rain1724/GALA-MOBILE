@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
- 
 
+
+    public FixedJoystick joystick;
     private Vector2 input;
     private Character character;
 
@@ -13,18 +14,21 @@ public class PlayerController : MonoBehaviour
     {
      
         character = GetComponent<Character>();
+        
     }
    
     public void HandleUpdate()
     {
         if (!character.IsMoving)
-        {
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
+        {   //clearly its a touch input
+            input.x = joystick.Horizontal;
+            input.y = joystick.Vertical;
 
+         
             //diagonal movements detected
             //if (input.x != 0) input.y = 0;
-
+            
+            //start moving if touch is not equal to zero
             if (input != Vector2.zero)
             {
                 StartCoroutine(character.Move(input, OnMoveOver));
@@ -35,6 +39,8 @@ public class PlayerController : MonoBehaviour
         character.HandleUpdate();
     }
 
+
+    //for colliding solid object
     private void OnMoveOver()
     {
         var colliders = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.OffsetY),0.2f, GameLayers.i.TriggerableLayers);
