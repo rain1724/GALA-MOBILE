@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameLayers : MonoBehaviour
 {
     [SerializeField] LayerMask solidObjectsLayer;
-    [SerializeField] LayerMask interactable;
+    [SerializeField] LayerMask interactableLayer;
     [SerializeField] LayerMask playerLayer;
     [SerializeField] LayerMask portalLayer;
 
@@ -21,9 +21,9 @@ public class GameLayers : MonoBehaviour
         get => solidObjectsLayer;
     }
 
-    public LayerMask interactableLayer
+    public LayerMask InteractableLayer
     {
-        get => interactable;
+        get => interactableLayer;
     }
 
     public LayerMask PlayerLayer

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState {FreeRoam, Paused}
+public enum GameState {FreeRoam, Paused, Dialog}
 
 public class GameController : MonoBehaviour
 {
@@ -21,13 +21,35 @@ public class GameController : MonoBehaviour
       
     }
 
+    private void Start()
+    {   //changing State when dialog is shown to stop player from moving
+        DialogManager.Instance.OnShowDialog += () =>
+        {
+            state = GameState.Dialog;
+
+        };
+
+        DialogManager.Instance.OnCloseDialog += () =>
+        {
+            if(state == GameState.Dialog)
+            state = GameState.FreeRoam;
+
+        };
+    }
+
     private void Update()
     {
         if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();
         }
+
+        else if (state == GameState.Dialog)
+        {
+            DialogManager.Instance.HandleUpdate();
+        }
     }
+
 
     public void PauseGame(bool pause)
     {
