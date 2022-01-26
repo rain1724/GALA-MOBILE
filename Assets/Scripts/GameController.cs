@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
-public enum GameState {FreeRoam, Paused, Dialog}
+public enum GameState {FreeRoam, Paused, Dialog, Menu}
 
 public class GameController : MonoBehaviour
 {
@@ -15,10 +16,13 @@ public class GameController : MonoBehaviour
 
     public static GameController Instance { get; private set; }
 
+    MenuController menuController;
+
     private void Awake()
     {
         Instance = this;
-      
+
+        menuController = GetComponent<MenuController>();      
     }
 
     private void Start()
@@ -35,6 +39,11 @@ public class GameController : MonoBehaviour
             state = GameState.FreeRoam;
 
         };
+
+        menuController.onBack += () =>
+        {
+            state = GameState.FreeRoam;
+        };
     }
 
     private void Update()
@@ -42,11 +51,22 @@ public class GameController : MonoBehaviour
         if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();
+
+            if (CrossPlatformInputManager.GetButtonDown("menu-button"))
+            {
+                menuController.OpenMenu();
+                state = GameState.Menu;
+            }   
         }
 
         else if (state == GameState.Dialog)
         {
             DialogManager.Instance.HandleUpdate();
+        }
+
+        else if (state == GameState.Menu)
+        {
+            menuController.HandleUpdate();
         }
     }
 

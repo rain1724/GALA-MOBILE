@@ -40,15 +40,14 @@ public class PlayerController : MonoBehaviour
             if (input != Vector2.zero)
             {
                 StartCoroutine(character.Move(input, OnMoveOver));
-           
             }
         }
-        
 
-       // if (Input.GetKey(KeyCode.Z))
+        character.HandleUpdate();
 
-      if (CrossPlatformInputManager.GetButtonDown("interact"))
-           Interact();
+        // if (Input.GetKey(KeyCode.Z))
+        if (CrossPlatformInputManager.GetButtonDown("interact"))
+           StartCoroutine(Interact());
 
         // to get the button if its press
         character.HandleUpdate();
@@ -56,14 +55,15 @@ public class PlayerController : MonoBehaviour
     }
 
     //interaction function obviously
-    void Interact()
+    IEnumerator Interact()
     {
         var facingDir = new Vector3(character.Animator.MoveX, character.Animator.MoveY);
         var interactPos = transform.position + facingDir;
+
         var collider = Physics2D.OverlapCircle(interactPos, 0.5f, GameLayers.i.InteractableLayer);
         if (collider != null)
         {
-            collider.GetComponent<Interactable>()?.Interact(transform);
+            yield return collider.GetComponent<Interactable>()?.Interact(transform);
         }
 
     }
