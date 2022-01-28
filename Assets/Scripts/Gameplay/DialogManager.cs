@@ -26,12 +26,39 @@ public class DialogManager : MonoBehaviour
 
     public bool IsShowing { get; private set; }
 
+    public IEnumerator ShowDialogText (string text, bool waitForinput=true, bool autoClose=true)
+    {
+        OnShowDialog?.Invoke();
+        IsShowing = true;
+        dialogBox.SetActive(true);
+
+        yield return TypeDialog(text);
+        if (waitForinput)
+        {
+            yield return new WaitUntil(() => CrossPlatformInputManager.GetButtonDown("interact"));
+        }
+        
+        if (autoClose)
+        {
+            CloseDialog();
+        }
+
+    }
+
+    public void CloseDialog()
+    {
+        dialogBox.SetActive(false);
+        IsShowing = false;
+        OnCloseDialog?.Invoke();
+
+    }
+
     //Showing Dialog when Triggred by Key
     public IEnumerator ShowDialog(Dialog dialog)
     {
         yield return new WaitForEndOfFrame();
-        OnShowDialog?.Invoke();
 
+        OnShowDialog?.Invoke();
         IsShowing = true;
         dialogBox.SetActive(true);
 

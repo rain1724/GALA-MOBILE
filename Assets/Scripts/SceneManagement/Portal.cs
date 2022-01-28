@@ -13,15 +13,21 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
     PlayerController player;
     public void OnplayerTriggered(PlayerController player)
     {
+        player.Character.Animator.IsMoving = false;
         this.player = player;
         StartCoroutine(SwitchScene());
     }
 
+    public bool TriggerRepeatedly => false;
+
     Fader fader;
     private void Start()
     {
+        //fadein/out effect
         fader = FindObjectOfType<Fader>();
     }
+
+    //for switching Scenes
     IEnumerator SwitchScene()
     {
         DontDestroyOnLoad(gameObject);

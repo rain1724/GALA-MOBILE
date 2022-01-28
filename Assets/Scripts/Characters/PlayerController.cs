@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -48,10 +49,6 @@ public class PlayerController : MonoBehaviour
         // if (Input.GetKey(KeyCode.Z))
         if (CrossPlatformInputManager.GetButtonDown("interact"))
            StartCoroutine(Interact());
-
-        // to get the button if its press
-        character.HandleUpdate();
-
     }
 
     //interaction function obviously
@@ -67,20 +64,32 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    IPlayerTriggerable currentlyInTrgigger;
+
     //for colliding solid object
     private void OnMoveOver()
     {
         var colliders = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.OffsetY),0.2f, GameLayers.i.TriggerableLayers);
+        IPlayerTriggerable triggerable = null;
 
         foreach (var collider in colliders)
         {
-            var triggerable = collider.GetComponent<IPlayerTriggerable>();
+            triggerable = collider.GetComponent<IPlayerTriggerable>();
             if (triggerable != null)
             {
+                if (triggerable == currentlyInTrgigger && !triggerable.TriggerRepeatedly)
+                    break;
+
+
                 triggerable.OnplayerTriggered(this);
+                currentlyInTrgigger = triggerable;
                 break;
             }
         }
+
+        if (colliders.Count() == 0 || triggerable != currentlyInTrgigger)
+            currentlyInTrgigger = null;
     }
 
     public Character Character => character;
