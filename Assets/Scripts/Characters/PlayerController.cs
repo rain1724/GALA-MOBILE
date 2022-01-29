@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ISavable
 {
 
 
@@ -90,6 +90,24 @@ public class PlayerController : MonoBehaviour
 
         if (colliders.Count() == 0 || triggerable != currentlyInTrgigger)
             currentlyInTrgigger = null;
+    }
+
+    //saving position via classes are serializable
+    //so that we can convert that class into binary
+    public object CaptureState()
+    {
+        //getting the position of object vector3(x,y,z) and store it in float array
+        //since C# object can represent any type of classes stored in object
+        float[] position = new float[] { transform.position.x, transform.position.y };
+        return position;
+    }
+
+    //loading position
+    //convert the object back to float array to pass the position in variable
+    public void RestoreState(object state)
+    {
+        var position = (float[])state;
+        transform.position = new Vector3(position[0], position[1]);
     }
 
     public Character Character => character;

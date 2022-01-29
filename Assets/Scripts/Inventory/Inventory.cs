@@ -6,7 +6,7 @@ using UnityEngine;
 
 public enum ItemCategory { Items, QuestItems}
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, ISavable
 {
     [SerializeField] List<ItemSlot> slots;
 
@@ -93,6 +93,28 @@ public class Inventory : MonoBehaviour
         return FindObjectOfType<PlayerController>().GetComponent<Inventory>();
     }
 
+    public object CaptureState()
+    {
+        var saveData = new InventorySaveData()
+        {
+            //converting list of item slot to list of item save data
+            items = slots.Select(i => i.GetSaveData()).ToList()
+        };
+
+        return saveData;
+    }
+
+    //restore the item
+    public void RestoreState(object state)
+    {
+        var saveData = state as InventorySaveData;
+
+        slots = saveData.items.Select(i => new ItemSlot(i)).ToList();
+
+        allSlots = new List<List<ItemSlot>>() { slots };
+
+        OnUpdated?.Invoke();
+    }
 }
 
 [Serializable]
@@ -102,7 +124,31 @@ public class ItemSlot
     [SerializeField] ItemBase item;
     [SerializeField] int count;
 
+    public ItemSlot()
+    {
 
+    }
+
+    //restore the itemslot from the item save data
+    //get the item name from game db dictionary as a key to
+    //restore the values of variables
+    public ItemSlot(ItemSaveData saveData)
+    {
+        item = ItemDB.GetItemByName(saveData.name);
+        count = saveData.count;
+    }
+
+    //get parameters of the item to save
+    public ItemSaveData GetSaveData()
+    {
+        var saveData = new ItemSaveData()
+        {
+            name = item.Name,
+            count = count
+        };
+
+        return saveData;
+    }
     public ItemBase Item {
         get => item;
         set => item = value;
@@ -115,4 +161,17 @@ public class ItemSlot
         get => count;
         set => count = value;
     }
+}
+
+[Serializable]
+public class ItemSaveData
+{
+    public string name;
+    public int count;
+}
+
+[Serializable]
+public class InventorySaveData
+{
+    public List<ItemSaveData> items;
 }

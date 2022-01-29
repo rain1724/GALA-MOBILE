@@ -38,7 +38,14 @@ public class MenuController : MonoBehaviour
         UpdateItemSelection();
 
     }
+    public void CloseAllMenu()
+    {
 
+        menu.SetActive(false);
+        menuo.SetActive(true);
+        menux.SetActive(false);
+
+    }
     public void CloseMenu()
     {
         
@@ -46,17 +53,20 @@ public class MenuController : MonoBehaviour
         menuo.SetActive(false);
         menux.SetActive(true);
 
+    }
 
+    public void CloseMenuSaveLoad()
+    {
+        menu.SetActive(false);
+        menuo.SetActive(true);
+        menux.SetActive(false);
     }
 
     public void CloseInventory()
     {
-
-        menu.SetActive(false);
         menuo.SetActive(true);
+        menu.SetActive(false);
         menux.SetActive(false);
-
-
     }
 
 
@@ -76,23 +86,40 @@ public class MenuController : MonoBehaviour
 
         if (prevSelection != selectedItem)
             UpdateItemSelection();
+        
+        if (CrossPlatformInputManager.GetButtonDown("menu-save"))
+        {
+            //save the data
+            SavingSystem.i.Save("saveSlot1");
+            CloseMenuSaveLoad();
+            onBack?.Invoke();
+            
+        }
 
-        else if (CrossPlatformInputManager.GetButtonDown("menu-inventory"))
+        if (CrossPlatformInputManager.GetButtonDown("menu-load"))
+        {
+            //load data obviosuly 
+            SavingSystem.i.Load("saveSlot1");
+            CloseMenuSaveLoad();
+            onBack?.Invoke();
+ 
+        }
+
+        if (CrossPlatformInputManager.GetButtonDown("menu-inventory"))
         {
             onMenuSelected?.Invoke(selectedItem);
             CloseMenu();
             
-            if (CrossPlatformInputManager.GetButtonDown("menu-button-close"))
-            {
-                onBack?.Invoke();
-               
-            }
+        }
 
-
+        if (CrossPlatformInputManager.GetButtonDown("menu-button-close"))
+        {
+            CloseAllMenu();
+            onBack?.Invoke();
 
         }
 
-       
+
 
 
 

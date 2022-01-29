@@ -16,6 +16,10 @@ public class GameController : MonoBehaviour
     GameState state;
     GameState prevState;
 
+    public SceneDetails CurrentScene { get; private set; }
+    public SceneDetails PrevScene { get; private set; }
+
+
     public static GameController Instance { get; private set; }
 
     MenuController menuController;
@@ -24,7 +28,9 @@ public class GameController : MonoBehaviour
     {
         Instance = this;
 
-        menuController = GetComponent<MenuController>();      
+        menuController = GetComponent<MenuController>();
+
+        ItemDB.Init();
     }
 
     private void Start()
@@ -57,26 +63,32 @@ public class GameController : MonoBehaviour
         {
             playerController.HandleUpdate();
 
-            if (Input.GetKeyDown(KeyCode.Return))
+            /*if (Input.GetKeyDown(KeyCode.Return))
             {
                 menuController.OpenMenu();
                 state = GameState.Menu;
                 menuController.HandleUpdate();
+            }*/
 
-            }
-
+            //for menu ofcourse
             if (CrossPlatformInputManager.GetButtonDown("menu-button"))
             {
                 menuController.OpenMenu();
                 state = GameState.Menu;
                 menuController.HandleUpdate();
-                
             }
 
-         
-
-
-
+            
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                //save the data
+                SavingSystem.i.Save("saveSlot1");
+            }
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                //load data obviosuly 
+                SavingSystem.i.Load("saveSlot1");
+            }
         }
 
         else if (state == GameState.Dialog)
@@ -100,8 +112,15 @@ public class GameController : MonoBehaviour
                 state = GameState.FreeRoam;
             };
             inventoryUI.HandleUpdate(onBack);
-
         }
+
+       
+    }
+
+    public void SetCurrentScene(SceneDetails currScene)
+    {
+        PrevScene = CurrentScene;
+        CurrentScene = currScene;
     }
     
 
@@ -121,10 +140,24 @@ public class GameController : MonoBehaviour
 
     void OnMenuSelected(int selectedItem)
     {
+        //menu
         if (selectedItem == 0)
         {
             inventoryUI.gameObject.SetActive(true);
             state = GameState.Bag;
+        }
+
+        //save
+        else if (selectedItem == 1)
+        {
+            SavingSystem.i.Save("saveSlot1");
+
+        }
+
+        //load
+        else if (selectedItem == 2)
+        {
+            SavingSystem.i.Load("saveSlot1");
         }
     }
 

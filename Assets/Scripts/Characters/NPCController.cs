@@ -39,7 +39,7 @@ public class NPCController : MonoBehaviour, Interactable
                 var quest = new Quest(questToComplete);
                 yield return quest.CompleteQuest(initiator);
                 questToComplete = null;
-                Debug.Log("Dad talked");
+                Debug.Log("Portal Opened");
             }
             
             if(itemGiver != null && itemGiver.CanBeGiven())
