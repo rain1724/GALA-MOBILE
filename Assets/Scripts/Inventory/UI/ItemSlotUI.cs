@@ -9,13 +9,22 @@ public class ItemSlotUI : MonoBehaviour
     [SerializeField] Text nameText;
     [SerializeField] Text countText;
 
+    RectTransform rectTransform;
+
+    private void Awake()
+    {
+        //get the property of inspector for setting the itemslotui dynamically
+        rectTransform = GetComponent<RectTransform>();
+    }
     public Text NameText => nameText;
     public Text CountText => countText;
+
+    public float Height => rectTransform.rect.height;
 
     public void SetData(ItemSlot itemSlot)
     {
         nameText.text = itemSlot.Item.Name;
-        countText.text = $"x { itemSlot.Count}";
+        countText.text = $"X { itemSlot.Count}";
     }
 
     

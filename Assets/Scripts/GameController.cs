@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 
 public enum GameState {FreeRoam, Paused, Dialog, Menu, Bag}
@@ -11,7 +12,6 @@ public class GameController : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] Camera worldCamera;
     [SerializeField] InventoryUI inventoryUI;
-
 
     GameState state;
     GameState prevState;
@@ -31,6 +31,8 @@ public class GameController : MonoBehaviour
         menuController = GetComponent<MenuController>();
 
         ItemDB.Init();
+        QuestDB.Init();
+        
     }
 
     private void Start()
@@ -46,7 +48,6 @@ public class GameController : MonoBehaviour
         {
             if (state == GameState.Dialog)
                 state = prevState;
-
         };
 
         menuController.onBack += () =>
@@ -63,34 +64,29 @@ public class GameController : MonoBehaviour
         {
             playerController.HandleUpdate();
 
-            /*if (Input.GetKeyDown(KeyCode.Return))
+            //for menu ofcourse
+            /*this is for backup controls in pc
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 menuController.OpenMenu();
                 state = GameState.Menu;
                 menuController.HandleUpdate();
             }*/
-
-            //for menu ofcourse
-            if (CrossPlatformInputManager.GetButtonDown("menu-button"))
+            if (CrossPlatformInputManager.GetButtonDown("menu-open"))
             {
                 menuController.OpenMenu();
                 state = GameState.Menu;
                 menuController.HandleUpdate();
+               
             }
 
             
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                //save the data
-                SavingSystem.i.Save("saveSlot1");
-            }
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                //load data obviosuly 
-                SavingSystem.i.Load("saveSlot1");
-            }
+
+
+
         }
 
+        //Dialog State
         else if (state == GameState.Dialog)
         {
             DialogManager.Instance.HandleUpdate();
@@ -101,16 +97,17 @@ public class GameController : MonoBehaviour
             menuController.HandleUpdate();
 
         }
-
+        //inventory UI State
         else if (state == GameState.Bag)
         {
             Action onBack = () =>
             {
                 inventoryUI.gameObject.SetActive(false);
-                menuController.CloseInventory();
-
+               
+                menuController.CloseMenu();
                 state = GameState.FreeRoam;
             };
+
             inventoryUI.HandleUpdate(onBack);
         }
 
@@ -140,8 +137,10 @@ public class GameController : MonoBehaviour
 
     void OnMenuSelected(int selectedItem)
     {
-        //menu
-        if (selectedItem == 0)
+
+        
+        //inventory
+        if (selectedItem ==0)
         {
             inventoryUI.gameObject.SetActive(true);
             state = GameState.Bag;
@@ -159,8 +158,18 @@ public class GameController : MonoBehaviour
         {
             SavingSystem.i.Load("saveSlot1");
         }
+        //quit game back to screen
+        else if (selectedItem == 3)
+        {
+            
+            SceneManager.LoadScene("Main Menu");
+            Destroy(GameObject.Find("EssentialObjects"));
+            SceneManager.UnloadSceneAsync("Gameplay");
+        }
+        
     }
 
+    
     public GameState State => state;
 }
 

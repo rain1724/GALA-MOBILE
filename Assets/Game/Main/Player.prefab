@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826b85a6c336f664fa825d38d0f88cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Angelo
   joystick: {fileID: 0}
 --- !u!114 &49719763565169699
 MonoBehaviour:
@@ -241,7 +242,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00fc7a1256158c4d887f890b673726a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots: []
+  slots:
+  - item: {fileID: 11400000, guid: 216175082f486fa48a2931e193a5aaba, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 216175082f486fa48a2931e193a5aaba, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 216175082f486fa48a2931e193a5aaba, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 216175082f486fa48a2931e193a5aaba, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 216175082f486fa48a2931e193a5aaba, type: 2}
+    count: 1
+  pokeballSlots:
+  - item: {fileID: 11400000, guid: bb81dfb984b4df94dab871800d53bc3a, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: bfe931c0cb904834ca23ca9c88e24558, type: 2}
+    count: 1
+  tmSlots: []
 --- !u!114 &7397809765885981286
 MonoBehaviour:
   m_ObjectHideFlags: 0

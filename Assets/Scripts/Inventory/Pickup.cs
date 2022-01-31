@@ -21,7 +21,9 @@ public class Pickup : MonoBehaviour, Interactable, ISavable
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
 
-            yield return DialogManager.Instance.ShowDialogText($"Found {item.Name}");
+            string playerName = initiator.GetComponent<PlayerController>().Name;
+
+            yield return DialogManager.Instance.ShowDialogText($"{playerName} Found {item.Name}");
 
         }
     }
@@ -38,6 +40,8 @@ public class Pickup : MonoBehaviour, Interactable, ISavable
         {
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
+
+           
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour, ISavable
 {
-
+    [SerializeField] string name;
 
     public FixedJoystick joystick;
     private Vector2 input;
@@ -110,6 +110,11 @@ public class PlayerController : MonoBehaviour, ISavable
         transform.position = new Vector3(position[0], position[1]);
     }
 
+    public string Name
+    {
+        get => name;
+    }
     public Character Character => character;
+
  
 }

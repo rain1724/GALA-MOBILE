@@ -237,10 +237,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 216175082f486fa48a2931e193a5aaba, type: 2}
-  count: 5
+  count: 2
   dialog:
     lines:
-    - Lugaw for You
+    - Take this lugaw
 --- !u!114 &5494142771216200588
 MonoBehaviour:
   m_ObjectHideFlags: 0

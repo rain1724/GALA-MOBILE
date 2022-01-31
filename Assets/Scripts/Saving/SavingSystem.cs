@@ -70,7 +70,11 @@ public class SavingSystem : MonoBehaviour
                 savable.RestoreState(state[id]);
         }
     }
-
+    public void RestoreEntity(SavableEntity entity)
+    {
+        if (gameState.ContainsKey(entity.UniqueId))
+        entity.RestoreState(gameState[entity.UniqueId]);
+    }
     void SaveFile(string saveFile, Dictionary<string, object> state)
     {
         string path = GetPath(saveFile);

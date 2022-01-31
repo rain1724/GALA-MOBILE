@@ -123,63 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &203026334
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1505415916250296921, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_Name
-      value: EssentialObjectLoader
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505415916250296923, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6707158df697cce4ab56e9c14ed0f22f, type: 3}
 --- !u!1 &648929340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,7 +1926,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 11
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3044,8 +2987,8 @@ Tilemap:
     m_Data: {fileID: -5651391593780653090, guid: 30270882bd9d46e4c8fb31390ffe97bc, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: -6997298722302573400, guid: 30270882bd9d46e4c8fb31390ffe97bc, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -6903291483300817404, guid: 30270882bd9d46e4c8fb31390ffe97bc, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: -3045962653906657791, guid: 30270882bd9d46e4c8fb31390ffe97bc, type: 3}
   - m_RefCount: 2
@@ -3064,8 +3007,8 @@ Tilemap:
     m_Data: {fileID: 3816667153822234817, guid: 30270882bd9d46e4c8fb31390ffe97bc, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -6405933817280637391, guid: 30270882bd9d46e4c8fb31390ffe97bc, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -6903291483300817404, guid: 30270882bd9d46e4c8fb31390ffe97bc, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 6973033839821397006, guid: 30270882bd9d46e4c8fb31390ffe97bc, type: 3}
   - m_RefCount: 12
@@ -9984,7 +9927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558545168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 60, z: 0}
+  m_LocalPosition: {x: 34, y: 60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1867552739}

@@ -4,34 +4,44 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum ItemCategory { Items, QuestItems}
+public enum ItemCategory { Items }
 
 public class Inventory : MonoBehaviour, ISavable
 {
     [SerializeField] List<ItemSlot> slots;
-
+    [SerializeField] List<ItemSlot> pokeballSlots;
+    [SerializeField] List<ItemSlot> tmSlots;
 
     List<List<ItemSlot>> allSlots;
 
     public event Action OnUpdated;
-
+ 
     
 
     private void Awake()
     {
-        allSlots = new List<List<ItemSlot>>() { slots };
+        allSlots = new List<List<ItemSlot>>() { slots, pokeballSlots, tmSlots };
     }
 
+    //Categorize Items
     public static List<string> ItemCategories { get; set; } = new List<string>()
     {
-        //Categorize Items
-        "Items", "QuestItems"
+        
+        "ITEMS", "POKEBALLS", "TM & HMs"
     };
 
     public List<ItemSlot> GetSlotsByCategory(int categoryIndex)
     {
         return allSlots[categoryIndex];
     }
+
+    public ItemBase GetItem(int itemIndex, int categoryIndex)
+    {
+        var currenSlots = GetSlotsByCategory(categoryIndex);
+        return currenSlots[itemIndex].Item;
+    }
+
+    
     public void AddItem(ItemBase item, int count=1)
     {
         int category = (int)GetCategoryFromItem(item);
@@ -78,14 +88,11 @@ public class Inventory : MonoBehaviour, ISavable
 
     ItemCategory GetCategoryFromItem(ItemBase item)
     {
-        if (item is RecoveryItem)
+        //if (item is RecoveryItem)
             return ItemCategory.Items;
 
-        else 
-            return ItemCategory.QuestItems;
-
-    
-
+        //else 
+          //  return ItemCategory.Items;
     }
 
     public static Inventory GetInventory()
@@ -98,7 +105,10 @@ public class Inventory : MonoBehaviour, ISavable
         var saveData = new InventorySaveData()
         {
             //converting list of item slot to list of item save data
-            items = slots.Select(i => i.GetSaveData()).ToList()
+            items = slots.Select(i => i.GetSaveData()).ToList(),
+            pokeballs = pokeballSlots.Select(i => i.GetSaveData()).ToList(),
+            tms = tmSlots.Select(i => i.GetSaveData()).ToList(),
+
         };
 
         return saveData;
@@ -108,17 +118,16 @@ public class Inventory : MonoBehaviour, ISavable
     public void RestoreState(object state)
     {
         var saveData = state as InventorySaveData;
-
         slots = saveData.items.Select(i => new ItemSlot(i)).ToList();
+        pokeballSlots = saveData.pokeballs.Select(i => new ItemSlot(i)).ToList();
+        tmSlots = saveData.tms.Select(i => new ItemSlot(i)).ToList();
 
-        allSlots = new List<List<ItemSlot>>() { slots };
-
+        allSlots = new List<List<ItemSlot>>() { slots, pokeballSlots, tmSlots };
         OnUpdated?.Invoke();
     }
 }
 
 [Serializable]
-
 public class ItemSlot
 {
     [SerializeField] ItemBase item;
@@ -126,38 +135,43 @@ public class ItemSlot
 
     public ItemSlot()
     {
-
+        //default
     }
-
     //restore the itemslot from the item save data
     //get the item name from game db dictionary as a key to
     //restore the values of variables
     public ItemSlot(ItemSaveData saveData)
     {
-        item = ItemDB.GetItemByName(saveData.name);
+        item = ItemDB.GetObjectByName(saveData.name);
         count = saveData.count;
     }
 
     //get parameters of the item to save
     public ItemSaveData GetSaveData()
     {
-        var saveData = new ItemSaveData()
+        var saveData = new ItemSaveData();
+        if (saveData != null)
         {
-            name = item.Name,
+            saveData = new ItemSaveData()
+            {
+                name = item.Name,
+                count = count
+            };
+        }
+        return saveData;
+
+       /* {
+            name = item.name,
             count = count
         };
-
-        return saveData;
+        return saveData;*/
     }
     public ItemBase Item {
         get => item;
         set => item = value;
-
     }
 
-
-    public int Count
-    {
+    public int Count{
         get => count;
         set => count = value;
     }
@@ -174,4 +188,7 @@ public class ItemSaveData
 public class InventorySaveData
 {
     public List<ItemSaveData> items;
+    public List<ItemSaveData> pokeballs;
+    public List<ItemSaveData> tms;
+
 }
