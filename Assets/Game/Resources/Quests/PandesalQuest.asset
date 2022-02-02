@@ -18,11 +18,11 @@ MonoBehaviour:
     lines: []
   inProgressDialogue:
     lines:
-    - sa tindahan ni Ate Juliet, sa bayan.
+    - 'Nanay: Bili ka ng Pandesal sa tindahan ni Ate Juliet, sa bayan.'
   completedDialogue:
     lines:
-    - Salamat, Anak
-    - Halina't Kumain na tayo ng Almusal.
-    - Pakitwag nalng ang iyong Tatay na nasa Kwarto.
+    - 'Nanay: Salamat, Anak'
+    - 'Nanay: Halina''t Kumain na tayo ng Almusal.'
+    - 'Nanay: Pakitawag nalang ang iyong Tatay na nasa Kwarto.'
   requiredItem: {fileID: 11400000, guid: 20a7dea348bff9c488d8b4b80c9cea59, type: 2}
   rewardItem: {fileID: 0}

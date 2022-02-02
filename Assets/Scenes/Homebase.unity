@@ -172,7 +172,7 @@ Transform:
   - {fileID: 275800442}
   - {fileID: 1039970541}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &49426633
 GameObject:
@@ -2901,7 +2901,7 @@ GameObject:
   - component: {fileID: 374972962}
   - component: {fileID: 374972961}
   m_Layer: 0
-  m_Name: QuestPandesal
+  m_Name: Quest-Purse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2935,7 +2935,7 @@ Transform:
   m_Children:
   - {fileID: 1884573742}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424463708
 GameObject:
@@ -5016,6 +5016,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1968264699}
     m_Modifications:
+    - target: {fileID: 2510509875591699973, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 748523096036611218, guid: d4ef07432d1fb76438d2189e12acf36d, type: 3}
     - target: {fileID: 2510509875591699974, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
       propertyPath: m_Name
       value: NPC-Mom
@@ -5030,11 +5034,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2510509875591699978, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.457287
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 2510509875591699978, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9020977
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2510509875591699978, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5845,7 +5849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 734237948187497547, guid: f7327b4446453b34eb913fb0bed12640, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 734237948187497547, guid: f7327b4446453b34eb913fb0bed12640, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6138,6 +6142,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 374972962}
     m_Modifications:
+    - target: {fileID: 2510509875591699973, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 748523096036611218, guid: d4ef07432d1fb76438d2189e12acf36d, type: 3}
     - target: {fileID: 2510509875591699974, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
       propertyPath: m_Name
       value: NPC-Mom
@@ -6148,11 +6156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2510509875591699978, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.457287
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 2510509875591699978, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9020977
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2510509875591699978, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6193,6 +6201,22 @@ PrefabInstance:
     - target: {fileID: 2510509875591699979, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
       propertyPath: questToComplete
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510509875591699979, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510509875591699979, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Yes...??
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510509875591699979, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510509875591699979, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
+      propertyPath: movementPattern.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3660459103113339455, guid: c3f2bdd45a5c2744f9ecfe50f5bd0592, type: 3}
       propertyPath: uniqueId
@@ -6250,7 +6274,7 @@ Transform:
   m_Children:
   - {fileID: 997763459}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2072466578
 GameObject:

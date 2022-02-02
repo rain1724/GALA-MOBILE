@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questToCheck: {fileID: 11400000, guid: aa44bce0350fc7844ba7bbba18bdad50, type: 2}
+  questToCheck1: {fileID: 11400000, guid: aa44bce0350fc7844ba7bbba18bdad50, type: 2}
   onStart: 2
   onComplete: 2
 --- !u!4 &8514970
@@ -200,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questToCheck: {fileID: 11400000, guid: 11e6c0db857300e45aa2aaaffdc29a16, type: 2}
+  questToCheck1: {fileID: 11400000, guid: 11e6c0db857300e45aa2aaaffdc29a16, type: 2}
   onStart: 1
   onComplete: 0
 --- !u!4 &214144699
@@ -9121,7 +9123,7 @@ MonoBehaviour:
   dialog:
     lines:
     - Lumipat ng lugar ang Pamilya Perez habang ikaw ay naka bakasyon.
-    - Kailanga mo agad iangkop ang iyong sarili sa bago ninyong lugar
+    - Kailangan mo agad iangkop ang iyong sarili sa bago ninyong lugar
     - habang pinapanatili mo ang pagiging mabuting anak at magaling na estudyante.
 --- !u!61 &1605336458
 BoxCollider2D:
@@ -9194,6 +9196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questToCheck: {fileID: 11400000, guid: aa44bce0350fc7844ba7bbba18bdad50, type: 2}
+  questToCheck1: {fileID: 11400000, guid: aa44bce0350fc7844ba7bbba18bdad50, type: 2}
   onStart: 1
   onComplete: 2
 --- !u!1 &2099896373

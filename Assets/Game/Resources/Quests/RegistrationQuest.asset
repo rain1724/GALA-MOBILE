@@ -21,10 +21,11 @@ MonoBehaviour:
     - 
   completedDialogue:
     lines:
-    - 'Angelo: Pinapatwag po kayo ni Nanay, kakain na daw po kayo'
-    - O Sige.
-    - Malapit na pala ang Pasuakn ninyo.
-    - Heto ang Registration Form mo, Ibigay mo ita sa School Registrar
-    - At habang nasa labas ka na din naman ay libutin mo na din ang bago natin lugar
+    - 'Angelo: Pinapatawag po kayo ni Nanay, kakain na daw po kayo'
+    - 'Tatay: O Sige.'
+    - 'Tatay: Malapit na pala ang Pasukan ninyo.'
+    - 'Tatay: Heto ang Registration Form mo, Ibigay mo ito sa School Registrar'
+    - 'Tatay: At habang nasa labas ka na din naman ay libutin mo na din ang bago
+      nating lugar'
   requiredItem: {fileID: 0}
   rewardItem: {fileID: 11400000, guid: c3ae29bfa07676f40badb3276b43114f, type: 2}

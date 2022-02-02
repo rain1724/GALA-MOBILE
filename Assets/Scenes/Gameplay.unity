@@ -1748,6 +1748,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4871559463706998443, guid: c530d695b4a187c48bf9cb9c7f7ad5d0, type: 3}
+      propertyPath: moveSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4871559464545643570, guid: c530d695b4a187c48bf9cb9c7f7ad5d0, type: 3}
       propertyPath: m_Name
       value: EssentialObjects

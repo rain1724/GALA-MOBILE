@@ -16,14 +16,14 @@ MonoBehaviour:
   description: 
   startDialogue:
     lines:
-    - Magandang Umaga Anak..                   Press A
-    - Pakikuha naman ang pitaka ko sa loob ng kwarto.
+    - 'Nanay: Magandang Umaga Anak..                   Press A'
+    - 'Nanay: Pakikuha naman ang pitaka ko sa loob ng kwarto.'
   inProgressDialogue:
     lines:
-    - Pakikuha naman ang pitaka ko sa loob ng kwarto.
+    - 'Nanay: Pakikuha naman ang pitaka ko sa loob ng kwarto.'
   completedDialogue:
     lines:
-    - Salamat, Anak.
-    - Heto ang pera, bumili ka ng Pandesal.
+    - 'Nanay: Salamat, Anak.'
+    - 'Nanay: Heto ang pera, bumili ka ng Pandesal.'
   requiredItem: {fileID: 11400000, guid: de24c80aefc476148a8f11bf1183d4f7, type: 2}
   rewardItem: {fileID: 11400000, guid: 8744be6c412122a448acff7e87c2fd65, type: 2}
