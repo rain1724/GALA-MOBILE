@@ -14,12 +14,18 @@ public class MenuController : MonoBehaviour
     [SerializeField] GameObject inventoryUI;
     [SerializeField] GameObject menuButtonClose;
     [SerializeField] GameObject menuButtonOpen;
+    [SerializeField] GameObject Map;
     [SerializeField] GameObject Joystickx;
     [SerializeField] GameObject interactbuttonx;
+    [SerializeField] GameObject MenuAction;
+    [SerializeField] GameObject MenuYes;
+    [SerializeField] GameObject MenuNo;
     
 
+
+
     //*Color highlightedColor = GlobalSettings.i.HighlightedColor;
-   
+
     public event Action<int> onMenuSelected;
     public event Action onBack;
 
@@ -47,9 +53,14 @@ public class MenuController : MonoBehaviour
         menu.SetActive(false);
         menuButtonClose.SetActive(false);
         menuButtonOpen.SetActive(true);
+        Map.gameObject.SetActive(false);
+        Joystickx.gameObject.SetActive(true);
+        interactbuttonx.gameObject.SetActive(true);
+
+        
     }
 
-  
+    
 
 
     public void HandleUpdate()
@@ -64,15 +75,49 @@ public class MenuController : MonoBehaviour
         }
 
 
+
         if (CrossPlatformInputManager.GetButtonDown("menu-save"))
         {
+
             SavingSystem.i.Save("saveSlot1");
+           
+
+            //MenuAction.gameObject.SetActive(true);
+            //state = GameState.MenuAction;
+            //CloseMenu();
+            
+
+
         }
 
 
         if (CrossPlatformInputManager.GetButtonDown("menu-load"))
         {
             SavingSystem.i.Load("saveSlot1");
+
+            /*MenuAction.gameObject.SetActive(true);
+            if (CrossPlatformInputManager.GetButtonDown("menu-yes"))
+            {
+                SavingSystem.i.Load("saveSlot1");
+                MenuAction.gameObject.SetActive(false);
+            }
+            else if (CrossPlatformInputManager.GetButtonDown("menu-no"))
+            {
+                MenuAction.gameObject.SetActive(false);
+                state = GameState.Menu;
+            }*/
+
+        }
+
+        if (CrossPlatformInputManager.GetButtonDown("menu-map"))
+        {
+            Map.gameObject.SetActive(true);
+            menuButtonClose.SetActive(true);
+            Joystickx.gameObject.SetActive(false);
+            interactbuttonx.gameObject.SetActive(false);
+            state = GameState.Map;
+
+
         }
 
         if (CrossPlatformInputManager.GetButtonDown("menu-quit"))
@@ -85,6 +130,7 @@ public class MenuController : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("menu-close"))
         {
             inventoryUI.gameObject.SetActive(false);
+            state = GameState.FreeRoam;
             onBack?.Invoke();
             CloseMenu();
 

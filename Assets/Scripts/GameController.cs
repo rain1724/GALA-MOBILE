@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 
-public enum GameState {FreeRoam, Paused, Dialog, Menu, Bag}
+public enum GameState {FreeRoam, Paused, Dialog, Menu, Bag, Map, MenuAction}
 
 public class GameController : MonoBehaviour
 {
@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
             state = GameState.FreeRoam;
         };
 
-        menuController.onMenuSelected +=  OnMenuSelected;
+       // menuController.onMenuSelected +=  OnMenuSelected;
     }
 
     private void Update()
@@ -79,11 +79,6 @@ public class GameController : MonoBehaviour
                 menuController.HandleUpdate();
                
             }
-
-            
-
-
-
         }
 
         //Dialog State
@@ -135,7 +130,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void OnMenuSelected(int selectedItem)
+    /*void OnMenuSelected(int selectedItem)
     {
 
         
@@ -167,7 +162,7 @@ public class GameController : MonoBehaviour
             SceneManager.UnloadSceneAsync("Gameplay");
         }
         
-    }
+    }*/
 
     
     public GameState State => state;
