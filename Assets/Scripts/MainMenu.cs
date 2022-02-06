@@ -9,20 +9,21 @@ public class MainMenu : MonoBehaviour
   
     public void PlayGame()
     {
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.UnloadScene("Main Menu");
     }
 
     public void BacktoScreen()
     {
         SceneManager.LoadScene("Main Menu");
         Destroy(GameObject.Find("EssentialObjects"));
-        SceneManager.UnloadSceneAsync("Gameplay");
     }
 
     public void LoadGame()
     {
-  
         SavingSystem.i.Load("saveSlot1");
+        SceneManager.UnloadScene("Main Menu");
+
+        Debug.Log("Clicked");
     }
 
     public void QuitGame()

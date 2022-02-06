@@ -6,48 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Gameplay2.unity
+    guid: b10b6497c8ee2ba43b07b23c8c0900f7
+  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 6857172a2010fa144bb349a92f63d1c5
   - enabled: 1
     path: Assets/Scenes/Homebase.unity
     guid: 4640dc1dd1667634b908dba7750e946a
   - enabled: 1
+    path: Assets/Scenes/School Interior.unity
+    guid: daa267448922ec54e9eae46d40a27694
+  - enabled: 1
+    path: Assets/Scenes/School-Grounds.unity
+    guid: 1614e28cb4bc3d94e8c8ed1306884fd9
+  - enabled: 1
     path: Assets/Scenes/HomeBedroom.unity
     guid: 283138286267b6a4e83549bb26fb19d5
   - enabled: 1
-    path: Assets/Scenes/Route1.unity
-    guid: 43f88893259ddc847a10868af010969b
-  - enabled: 1
-    path: Assets/Scenes/lake.unity
-    guid: c92d2223cdf756e468166d7bf7d26bd5
-  - enabled: 1
-    path: Assets/Scenes/orchard.unity
-    guid: 0c910b75179656049990ab5384380f85
-  - enabled: 1
-    path: Assets/Scenes/Gameplay.unity
-    guid: b10b6497c8ee2ba43b07b23c8c0900f7
-  - enabled: 1
-    path: Assets/Scenes/beach.unity
-    guid: 19eab2680376fed46aa97228015a9f56
-  - enabled: 1
-    path: Assets/Scenes/cemetery.unity
-    guid: 3752971f30e85074aaf74adf2ce26d83
-  - enabled: 1
-    path: Assets/Scenes/Church-Indoor.unity
-    guid: 63fb41a0ce9ea884092562928e5bcc06
-  - enabled: 1
-    path: Assets/Scenes/church.unity
-    guid: 97eb82b0c18668c42bc38b4e46714007
-  - enabled: 1
-    path: Assets/Scenes/school building.unity
-    guid: de4b986894b550841ab6967ce15eac63
-  - enabled: 1
-    path: Assets/Scenes/school grounds.unity
-    guid: 6d1fd83000735d6498cd42448fd65a09
-  - enabled: 1
-    path: Assets/Scenes/School-2nd Floor.unity
-    guid: c53b30161e8e87d4fbc258bb00b7bf1c
-  - enabled: 1
-    path: Assets/Scenes/town.unity
-    guid: 4f0deb04075891a4cba0342303d4737f
+    path: Assets/Scenes/School Classroom.unity
+    guid: 6650fe507ee13484a99c490a76691638
   m_configObjects: {}

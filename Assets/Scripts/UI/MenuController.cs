@@ -15,8 +15,6 @@ public class MenuController : MonoBehaviour
     [SerializeField] GameObject menuButtonClose;
     [SerializeField] GameObject menuButtonOpen;
     [SerializeField] GameObject Map;
-    [SerializeField] GameObject Joystickx;
-    [SerializeField] GameObject interactbuttonx;
     [SerializeField] GameObject MenuAction;
     [SerializeField] GameObject MenuYes;
     [SerializeField] GameObject MenuNo;
@@ -54,8 +52,8 @@ public class MenuController : MonoBehaviour
         menuButtonClose.SetActive(false);
         menuButtonOpen.SetActive(true);
         Map.gameObject.SetActive(false);
-        Joystickx.gameObject.SetActive(true);
-        interactbuttonx.gameObject.SetActive(true);
+        
+       
 
         
     }
@@ -113,8 +111,6 @@ public class MenuController : MonoBehaviour
         {
             Map.gameObject.SetActive(true);
             menuButtonClose.SetActive(true);
-            Joystickx.gameObject.SetActive(false);
-            interactbuttonx.gameObject.SetActive(false);
             state = GameState.Map;
 
 

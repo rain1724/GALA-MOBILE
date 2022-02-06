@@ -50,4 +50,4 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
 
 }
 
-public enum DestinationIdentifier { House, School, church}
+public enum DestinationIdentifier { A, B, C}
