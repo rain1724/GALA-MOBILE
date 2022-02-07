@@ -149,8 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Good Morning! Your vacation is almost over.
-    - Go on and Explore Outside
+    - Yes
   questToStart: {fileID: 0}
   questToComplete: {fileID: 0}
   movementPattern:

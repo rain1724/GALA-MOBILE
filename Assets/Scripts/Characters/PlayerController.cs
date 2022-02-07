@@ -2,22 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour, ISavable
 {
-    [SerializeField] string name;
+    //[SerializeField] string name;
 
     
     private Vector2 input;
     private Character character;
     private CharacterAnimator animator;
 
-    
+    public static string playername;
+
 
     private void Awake()
     {
-     
+
+        
         character = GetComponent<Character>();
         animator = GetComponent<CharacterAnimator>();
         
@@ -117,7 +120,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
     public string Name
     {
-        get => name;
+        get => playername;
     }
     public Character Character => character;
 

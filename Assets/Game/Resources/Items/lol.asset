@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 963df24251be8e0498d1cf7ca3fcca99, type: 3}
-  m_Name: Coin
+  m_Name: lol
   m_EditorClassIdentifier: 
-  name: G-Coin
-  description: a coin
-  icon: {fileID: 423126264962350389, guid: 4bcc770ca73cc4742833ebe9c2132c2e, type: 3}
+  name: lol coin
+  description: lol
+  icon: {fileID: 0}

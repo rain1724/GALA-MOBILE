@@ -18,7 +18,6 @@ public class MenuController : MonoBehaviour
     [SerializeField] GameObject MenuAction;
     [SerializeField] GameObject MenuYes;
     [SerializeField] GameObject MenuNo;
-    [SerializeField] GameObject MainMenu;
 
 
 
@@ -37,11 +36,7 @@ public class MenuController : MonoBehaviour
     {
         menuItems = menu.GetComponentsInChildren<Text>().ToList();   
     }
-    public void OpenMainMenu()
-    {
-        MainMenu.SetActive(false);
-    }
-
+    
     public void OpenMenu()
     {
         menuButtonOpen.SetActive(false);
@@ -125,7 +120,7 @@ public class MenuController : MonoBehaviour
         {
             SceneManager.LoadScene("Main Menu");
             Destroy(GameObject.Find("EssentialObjects"));
-            SceneManager.UnloadScene("Gameplay");
+            
         }
 
         if (CrossPlatformInputManager.GetButtonDown("menu-close"))

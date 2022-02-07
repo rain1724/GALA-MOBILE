@@ -236,8 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c29852fd45810d48bcf5ab1f26ec4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 216175082f486fa48a2931e193a5aaba, type: 2}
-  count: 2
+  item: {fileID: 0}
+  count: 0
   dialog:
     lines:
     - Take this lugaw

@@ -10,8 +10,8 @@ public enum GameState {FreeRoam, Paused, Dialog, Menu, Bag, Map, MenuAction}
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
-    [SerializeField] Camera worldCamera;
-    [SerializeField] InventoryUI inventoryUI;
+ 
+  
 
     GameState state;
     GameState prevState;
@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
 
     public static GameController Instance { get; private set; }
 
+    InventoryUI inventoryUI;
     MenuController menuController;
 
     private void Awake()
