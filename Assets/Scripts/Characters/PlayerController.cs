@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour, ISavable
 {
     [SerializeField] string name;
 
-    public FixedJoystick joystick;
+    
     private Vector2 input;
     private Character character;
     private CharacterAnimator animator;

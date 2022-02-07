@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-  
+    IEnumerator Start()
+    {
+        LoadGame();
+        yield return null;
+    }
+
     public void PlayGame()
     {
-        SceneManager.UnloadScene("Main Menu");
+        Application.LoadLevel("Gameplay2");
+
     }
 
     public void BacktoScreen()
@@ -20,10 +26,8 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
+        
         SavingSystem.i.Load("saveSlot1");
-        SceneManager.UnloadScene("Main Menu");
-
-        Debug.Log("Clicked");
     }
 
     public void QuitGame()
