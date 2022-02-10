@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 963df24251be8e0498d1cf7ca3fcca99, type: 3}
-  m_Name: RegistrationForm
+  m_Name: Item 2
   m_EditorClassIdentifier: 
-  name: RegistrationForm
-  description: 
-  icon: {fileID: 0}
+  name: Item 2
+  description: Item new
+  icon: {fileID: -6958784436548596773, guid: 9311227cd6d13f442b62e2d93d0e1a24, type: 3}

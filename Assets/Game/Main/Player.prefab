@@ -155,7 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826b85a6c336f664fa825d38d0f88cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Angelo
 --- !u!114 &49719763565169699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +240,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00fc7a1256158c4d887f890b673726a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots: []
+  slots:
+  - item: {fileID: 11400000, guid: de24c80aefc476148a8f11bf1183d4f7, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 2dfd994877cf81943b8ec81e6c990f9d, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: de24c80aefc476148a8f11bf1183d4f7, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 2dfd994877cf81943b8ec81e6c990f9d, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: de24c80aefc476148a8f11bf1183d4f7, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 2dfd994877cf81943b8ec81e6c990f9d, type: 2}
+    count: 1
   pokeballSlots: []
   tmSlots: []
 --- !u!114 &7397809765885981286

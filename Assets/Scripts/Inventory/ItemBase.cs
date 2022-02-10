@@ -9,14 +9,11 @@ public class ItemBase : ScriptableObject
     [SerializeField] Sprite icon;
 
 
-    public string Name => name;
+    public virtual string Name => name;
 
     public string Description => description;
 
     public Sprite Icon => icon;
     
-    public virtual bool Use()
-    {
-        return false;
-    }
+   
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6692386131348705880}
   - component: {fileID: 891354795914650318}
   - component: {fileID: 4662879068359427477}
+  - component: {fileID: 8782065390522859381}
   m_Layer: 5
   m_Name: Button-Up
   m_TagString: Untagged
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8782065390522859381}
         m_TargetAssemblyTypeName: UnityStandardAssets.CrossPlatformInput.ButtonHandler,
           Assembly-CSharp-firstpass
         m_MethodName: SetDownState
@@ -134,7 +135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8782065390522859381}
         m_TargetAssemblyTypeName: UnityStandardAssets.CrossPlatformInput.ButtonHandler,
           Assembly-CSharp-firstpass
         m_MethodName: SetUpState
@@ -163,6 +164,19 @@ MonoBehaviour:
   axisValue: 1
   responseSpeed: 10000
   returnToCentreSpeed: 10000
+--- !u!114 &8782065390522859381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418363606903976190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bf3be603548374ca46f521a3aa7fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: up
 --- !u!1 &3661619723108641039
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +225,7 @@ GameObject:
   - component: {fileID: 7319883242729778624}
   - component: {fileID: 874555643696584204}
   - component: {fileID: 7267429865162328910}
+  - component: {fileID: 1470353270660523188}
   m_Layer: 5
   m_Name: Button-Down
   m_TagString: Untagged
@@ -319,7 +334,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1470353270660523188}
         m_TargetAssemblyTypeName: UnityStandardAssets.CrossPlatformInput.ButtonHandler,
           Assembly-CSharp-firstpass
         m_MethodName: SetDownState
@@ -332,7 +347,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1470353270660523188}
         m_TargetAssemblyTypeName: UnityStandardAssets.CrossPlatformInput.ButtonHandler,
           Assembly-CSharp-firstpass
         m_MethodName: SetUpState
@@ -361,6 +376,19 @@ MonoBehaviour:
   axisValue: -1
   responseSpeed: 10000
   returnToCentreSpeed: 10000
+--- !u!114 &1470353270660523188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4616851778769665212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85bf3be603548374ca46f521a3aa7fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: down
 --- !u!1 &5234532908688230312
 GameObject:
   m_ObjectHideFlags: 0

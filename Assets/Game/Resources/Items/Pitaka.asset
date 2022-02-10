@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Pitaka
   m_EditorClassIdentifier: 
   name: Pitaka
-  description: pitaka ni mama
-  icon: {fileID: 0}
+  description: Item new
+  icon: {fileID: -2087089168056819677, guid: 9311227cd6d13f442b62e2d93d0e1a24, type: 3}

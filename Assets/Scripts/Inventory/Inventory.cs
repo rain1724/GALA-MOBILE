@@ -160,11 +160,7 @@ public class ItemSlot
         }
         return saveData;
 
-       /* {
-            name = item.name,
-            count = count
-        };
-        return saveData;*/
+       
     }
     public ItemBase Item {
         get => item;

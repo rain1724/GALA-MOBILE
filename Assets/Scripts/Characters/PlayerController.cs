@@ -31,13 +31,8 @@ public class PlayerController : MonoBehaviour, ISavable
     {
         if (!character.IsMoving)
         {   //clearly its a touch input
-            //input.x = joystick.Horizontal;
-            //input.y = joystick.Vertical;
-
             input.x = CrossPlatformInputManager.GetAxis("Horizontal");
             input.y = CrossPlatformInputManager.GetAxis("Vertical");
-
-
 
             //input.x = Input.GetAxisRaw("Horizontal");
             //input.y = Input.GetAxisRaw("Vertical");

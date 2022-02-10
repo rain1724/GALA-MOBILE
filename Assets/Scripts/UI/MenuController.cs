@@ -21,15 +21,13 @@ public class MenuController : MonoBehaviour
 
 
 
-
-    //*Color highlightedColor = GlobalSettings.i.HighlightedColor;
-
     public event Action<int> onMenuSelected;
     public event Action onBack;
 
     List<Text> menuItems;
 
     int selectedItem = 0;
+
 
     GameState state;
     private void Awake()
@@ -42,8 +40,7 @@ public class MenuController : MonoBehaviour
         menuButtonOpen.SetActive(false);
         menu.SetActive(true);
         menuButtonClose.SetActive(true);
-        
-        //UpdateItemSelection();
+        UpdateItemSelection();
 
     }
     public void CloseMenu()
@@ -52,13 +49,8 @@ public class MenuController : MonoBehaviour
         menuButtonClose.SetActive(false);
         menuButtonOpen.SetActive(true);
         Map.gameObject.SetActive(false);
-        
-       
-
-        
+ 
     }
-
-    
 
 
     public void HandleUpdate()
@@ -70,6 +62,7 @@ public class MenuController : MonoBehaviour
             inventoryUI.gameObject.SetActive(true);
             menuButtonClose.SetActive(true);
             state = GameState.Bag;
+            
         }
 
 
@@ -132,13 +125,13 @@ public class MenuController : MonoBehaviour
 
         }
 
-        /*
-        int prevSelection = selectedItem;
+        
+        //int prevSelection = selectedItem;
 
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        /*if (CrossPlatformInputManager.GetButtonDown("down"))
             ++selectedItem;
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (CrossPlatformInputManager.GetButtonDown("up"))
             --selectedItem;
 
         selectedItem = Mathf.Clamp(selectedItem, 0, menuItems.Count - 1);
@@ -146,7 +139,7 @@ public class MenuController : MonoBehaviour
         if (prevSelection != selectedItem)
             UpdateItemSelection();
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        /*if (CrossPlatformInputManager.GetButtonDown("interact"))
         {
             onMenuSelected?.Invoke(selectedItem);
         }
@@ -159,7 +152,7 @@ public class MenuController : MonoBehaviour
 
 
     }
-   /* void UpdateItemSelection()
+   void UpdateItemSelection()
     {
         for (int i = 0; i < menuItems.Count; i++)
         {
@@ -168,6 +161,6 @@ public class MenuController : MonoBehaviour
             else
                 menuItems[i].color = Color.black;
         }
-    }*/
+    }
 
 }

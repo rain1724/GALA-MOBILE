@@ -23,10 +23,11 @@ public class InventoryUI : MonoBehaviour
     int selectedItem = 0;
     int selectedCategory = 0;
 
+    MenuController menuController;
     InventoryUIState state;
 
     //scroll view in inventory allowed item
-    const int itemsInViewport = 10;
+    const int itemsInViewport = 8;
     
 
     List<ItemSlotUI> slotUIList;
@@ -73,8 +74,10 @@ public class InventoryUI : MonoBehaviour
             int prevCategory = selectedCategory;
 
             if (Input.GetKeyDown(KeyCode.DownArrow))
+                //(CrossPlatformInputManager.GetButtonDown("down"))
                 ++selectedItem;
             else if (Input.GetKeyDown(KeyCode.UpArrow))
+                //(CrossPlatformInputManager.GetButtonDown("up"))
                 --selectedItem;
             else if (Input.GetKeyDown(KeyCode.RightArrow))
                 ++selectedCategory;
@@ -100,7 +103,8 @@ public class InventoryUI : MonoBehaviour
                 UpdateItemSelection();
 
             }
-            if (Input.GetKeyDown(KeyCode.X))
+            if (CrossPlatformInputManager.GetButtonDown("menu-close"))
+                menuController.CloseMenu();
                 onBack?.Invoke();
         }
     }

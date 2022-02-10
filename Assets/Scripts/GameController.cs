@@ -10,8 +10,10 @@ public enum GameState {FreeRoam, Paused, Dialog, Menu, Bag, Map, MenuAction}
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
- 
-  
+    [SerializeField] InventoryUI inventoryUI;
+   
+
+
 
     GameState state;
     GameState prevState;
@@ -22,7 +24,7 @@ public class GameController : MonoBehaviour
 
     public static GameController Instance { get; private set; }
 
-    InventoryUI inventoryUI;
+    
     MenuController menuController;
 
     private void Awake()
@@ -56,7 +58,7 @@ public class GameController : MonoBehaviour
             state = GameState.FreeRoam;
         };
 
-       // menuController.onMenuSelected +=  OnMenuSelected;
+      // menuController.onMenuSelected +=  OnMenuSelected;
     }
 
     private void Update()
@@ -98,9 +100,7 @@ public class GameController : MonoBehaviour
         {
             Action onBack = () =>
             {
-                inventoryUI.gameObject.SetActive(false);
-               
-                menuController.CloseMenu();
+                inventoryUI.gameObject.SetActive(false); 
                 state = GameState.FreeRoam;
             };
 
@@ -131,41 +131,51 @@ public class GameController : MonoBehaviour
         }
     }
 
-    /*void OnMenuSelected(int selectedItem)
-    {
+     /*void OnMenuSelected(int selectedItem)
+     {
 
-        
-        //inventory
-        if (selectedItem ==0)
-        {
-            inventoryUI.gameObject.SetActive(true);
-            state = GameState.Bag;
-        }
 
-        //save
-        else if (selectedItem == 1)
-        {
-            SavingSystem.i.Save("saveSlot1");
+         //inventory
+         if (selectedItem ==0)
+         {
+             inventoryUI.gameObject.SetActive(true);
+             state = GameState.Bag;
+         }
 
-        }
+         //save
+         else if (selectedItem == 1)
+         {
+             SavingSystem.i.Save("saveSlot1");
 
-        //load
-        else if (selectedItem == 2)
-        {
-            SavingSystem.i.Load("saveSlot1");
-        }
-        //quit game back to screen
-        else if (selectedItem == 3)
-        {
-            
-            SceneManager.LoadScene("Main Menu");
-            Destroy(GameObject.Find("EssentialObjects"));
-            SceneManager.UnloadSceneAsync("Gameplay");
-        }
-        
-    }*/
+         }
 
-    
+         //load
+         else if (selectedItem == 2)
+         {
+             SavingSystem.i.Load("saveSlot1");
+         }
+
+         //map
+         else if (selectedItem == 3)
+         {
+
+             Map.gameObject.SetActive(true);
+             menuButtonClose.SetActive(true);
+             state = GameState.Map;
+         }
+
+
+
+         //quit game back to screen
+         else if (selectedItem == 4)
+         {   
+             SceneManager.LoadScene("Main Menu");
+             Destroy(GameObject.Find("EssentialObjects"));
+         }
+
+     }*/
+
+
     public GameState State => state;
 }
 
