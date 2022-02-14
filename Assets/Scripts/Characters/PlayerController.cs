@@ -14,9 +14,10 @@ public class PlayerController : MonoBehaviour, ISavable
     private Character character;
     private CharacterAnimator animator;
 
+
     public static string playername;
 
-
+    
     private void Awake()
     {
 
@@ -33,6 +34,10 @@ public class PlayerController : MonoBehaviour, ISavable
         {   //clearly its a touch input
             input.x = CrossPlatformInputManager.GetAxis("Horizontal");
             input.y = CrossPlatformInputManager.GetAxis("Vertical");
+            
+            
+                
+
 
             //input.x = Input.GetAxisRaw("Horizontal");
             //input.y = Input.GetAxisRaw("Vertical");
@@ -44,8 +49,11 @@ public class PlayerController : MonoBehaviour, ISavable
             if (input != Vector2.zero)
             {
                 StartCoroutine(character.Move(input, OnMoveOver));
+               
+
             }
         }
+
 
         character.HandleUpdate();
 

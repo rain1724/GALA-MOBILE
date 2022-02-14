@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [SerializeField]
+ 
     public float moveSpeed;
     public bool IsMoving { get; private set; }
 
@@ -57,6 +59,7 @@ public class Character : MonoBehaviour
     public void HandleUpdate()
     {
         animator.IsMoving = IsMoving;
+
     }
     // checking if path is walkable
     private bool IsPathClear(Vector3 targetPos)
@@ -96,4 +99,5 @@ public class Character : MonoBehaviour
     {
         get => animator;
     }
+
 }

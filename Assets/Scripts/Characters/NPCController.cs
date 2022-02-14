@@ -21,11 +21,13 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
 
     Character character;
     ItemGiver itemGiver;
+    QuestionGiver questionGiver;
 
     private void Awake()
     {
         character = GetComponent<Character>();
         itemGiver = GetComponent<ItemGiver>();
+        questionGiver = GetComponent<QuestionGiver>();
     }
     public IEnumerator Interact(Transform initiator)
     {
@@ -72,6 +74,10 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
                 {
                     yield return DialogManager.Instance.ShowDialog(activeQuest.Base.InProgressDialogue);
                 }
+            }
+            else if (questionGiver != null)
+            {
+                yield return questionGiver.question(initiator, dialog);
             }
             else
             {

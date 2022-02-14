@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
-
+    public enum Difficulties { Easy, Medium, Hard };
     public GameObject[] characters;
     public Transform playerStartPosition;
     public string menuScene = "Character Selection Menu";
     private string selectedCharacterDataName = "SelectedCharacter";
     int selectedCharacter;
     public GameObject playerObject;
+
+    public static Difficulties Difficulty = Difficulties.Easy;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,19 +22,5 @@ public class GameControl : MonoBehaviour
         playerObject = Instantiate(characters[selectedCharacter],playerStartPosition.position,characters[selectedCharacter].transform.rotation);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            ReturnToMainMenu();
-        }
-    }
-
-    public void ReturnToMainMenu()
-    {
-        SceneManager.LoadScene(menuScene);
-
-    }
-
+   
 }

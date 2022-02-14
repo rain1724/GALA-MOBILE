@@ -8,24 +8,27 @@ public class CharacterSelectionMenu : MonoBehaviour
 {
     
     public GameObject[] playerObjects;
+    public GameObject DifficultyToggles;
     public int selectedCharacter = 0;
 
     public InputField playername;
 
-    public string gameScene = "";
+    
+
+    
 
     private string selectedCharacterDataName = "SelectedCharacter";
 
     
     void Start()
     {
-        
-
         HideAllCharacters();
 
         selectedCharacter = PlayerPrefs.GetInt(selectedCharacterDataName, 0);
 
         playerObjects[selectedCharacter].SetActive(true);
+
+        DifficultyToggles.transform.GetChild((int)GameControl.Difficulty).GetComponent<Toggle>().isOn = true;
     }
 
 
@@ -61,11 +64,48 @@ public class CharacterSelectionMenu : MonoBehaviour
 
     public void StartGame()
     {
-        PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
-        SceneManager.LoadScene(gameScene);
-        PlayerController.playername = playername.text;
+        switch (GameControl.Difficulty)
+        {
+            case GameControl.Difficulties.Easy:
+                PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
+                SceneManager.LoadScene("Gameplay2");
+                PlayerController.playername = playername.text;
+                break;
+
+            case GameControl.Difficulties.Medium:
+                PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
+                SceneManager.LoadScene("Gameplay3");
+                PlayerController.playername = playername.text;
+                break;
+
+            case GameControl.Difficulties.Hard:
+                PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
+                SceneManager.LoadScene("Gameplay4");
+                PlayerController.playername = playername.text;
+                break;
+        }
+        
+        
     }
 
-    
+    #region Difficulty
+    public void SetEasyDifficulty(bool isOn)
+    {
+        if (isOn)
+            GameControl.Difficulty = GameControl.Difficulties.Easy;
+    }
+    public void SetMediumDifficulty(bool isOn)
+    {
+        if (isOn)
+            GameControl.Difficulty = GameControl.Difficulties.Medium;
+    }
+    public void SetHardDifficulty(bool isOn)
+    {
+        if (isOn)
+            GameControl.Difficulty = GameControl.Difficulties.Hard;
+    }
+
+    #endregion
+
 
 }

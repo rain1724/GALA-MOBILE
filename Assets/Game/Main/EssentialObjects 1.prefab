@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 1090314710999895876}
+  choiceBox: {fileID: 1311240508055669165}
   dialogText: {fileID: 7005492517489862372}
   lettersPerSecond: 45
 --- !u!114 &9041259135659897450
@@ -1883,6 +1884,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8456017959616776494, guid: f30aabff0dc440746a59e9beedea95bf, type: 3}
   m_PrefabInstance: {fileID: 7977956270102304828}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1311240508055669165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8972598440140640657, guid: f30aabff0dc440746a59e9beedea95bf, type: 3}
+  m_PrefabInstance: {fileID: 7977956270102304828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012734637381800210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d53a6d6364f9f45bc703666c8b1984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &516858855895128827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7609716202468311751, guid: f30aabff0dc440746a59e9beedea95bf, type: 3}

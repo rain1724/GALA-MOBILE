@@ -240,19 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00fc7a1256158c4d887f890b673726a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots:
-  - item: {fileID: 11400000, guid: de24c80aefc476148a8f11bf1183d4f7, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: 88d710a8fe2a64644ace5b55cd83eb76, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: de24c80aefc476148a8f11bf1183d4f7, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: de24c80aefc476148a8f11bf1183d4f7, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: de24c80aefc476148a8f11bf1183d4f7, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: de24c80aefc476148a8f11bf1183d4f7, type: 2}
-    count: 1
+  slots: []
   pokeballSlots: []
   tmSlots: []
 --- !u!114 &7397809765885981286

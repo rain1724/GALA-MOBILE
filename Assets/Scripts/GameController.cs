@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour
     GameState state;
     GameState prevState;
 
+    public GameObject DifficultyToggles;
+
     public SceneDetails CurrentScene { get; private set; }
     public SceneDetails PrevScene { get; private set; }
 

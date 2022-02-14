@@ -71,12 +71,13 @@ public class MenuController : MonoBehaviour
         {
 
             SavingSystem.i.Save("saveSlot1");
-           
+            
+
 
             //MenuAction.gameObject.SetActive(true);
             //state = GameState.MenuAction;
             //CloseMenu();
-            
+
 
 
         }
