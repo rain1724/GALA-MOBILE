@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2510509875591699974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2510509875591699978}
+  - component: {fileID: 2510509875591699973}
+  - component: {fileID: 2510509875591699972}
+  - component: {fileID: 2510509875591699975}
+  - component: {fileID: 2510509875591699979}
+  - component: {fileID: 2510509875591699977}
+  - component: {fileID: 2510509875591699976}
+  - component: {fileID: 3660459103113339455}
+  m_Layer: 10
+  m_Name: Daniel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2510509875591699978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510509875591699974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.53, y: -13.989999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2510509875591699973
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510509875591699974}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1702491447
+  m_SortingLayer: 9
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 4902216104502382130, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!50 &2510509875591699972
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510509875591699974}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &2510509875591699975
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510509875591699974}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.26159}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!114 &2510509875591699979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510509875591699974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc676ff83083284b840c97a6c17c39e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    lines:
+    - Yes Hello?
+    - If u want to defeat Gather 5 Silver Medals
+  questToStart: {fileID: 0}
+  questToComplete: {fileID: 0}
+  movementPattern:
+  - {x: 2, y: 0}
+  - {x: -2, y: 0}
+  - {x: 0, y: 1}
+  timeBetweenPattern: 2
+--- !u!114 &2510509875591699977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510509875591699974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a629afe5871581f44a426f1a6a716820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!114 &2510509875591699976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510509875591699974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93c12204617eb74b9741235fbd8aaeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkDownSprites:
+  - {fileID: 4902216104502382130, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 5859358271750446090, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 4247118275420708007, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 1585004556163856174, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -3485056904500978344, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 3158009573525805307, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -8538622961184544503, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -552986335061838142, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 3929175020268944691, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  walkUpSprites:
+  - {fileID: -8851953125620440796, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 1360381730376998502, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 6749676320556492009, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 2049078231688118136, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -1846585632732940125, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 8829794522976249747, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -2505606540647519485, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 1084431763656713813, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -6524588562315820572, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  walkRightSprites:
+  - {fileID: -8913943655596258720, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 2362741033351694401, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 2115672256696873641, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -6429854579141974264, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -545514784349375389, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 3447365035145108804, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 2237672411840494364, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -5141507134620794938, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -1325689568353576679, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  walkLeftSprites:
+  - {fileID: -5147707725863291358, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -6884576742446742943, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 1438641873207611503, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 8706360333454832568, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 7677170293454430509, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 9201092269561910093, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -3746169697728157492, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: 5850696770573412723, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+  - {fileID: -4386304590454480799, guid: f37edb3a8ef636c43a6f28eabbb192a3, type: 3}
+--- !u!114 &3660459103113339455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2510509875591699974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: 

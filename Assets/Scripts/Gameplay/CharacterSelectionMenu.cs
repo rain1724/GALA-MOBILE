@@ -12,17 +12,13 @@ public class CharacterSelectionMenu : MonoBehaviour
     public int selectedCharacter = 0;
 
     public InputField playername;
-
-    
-
-    
-
     private string selectedCharacterDataName = "SelectedCharacter";
 
-    
+    Fader fader;
     void Start()
     {
         HideAllCharacters();
+        fader = FindObjectOfType<Fader>();
 
         selectedCharacter = PlayerPrefs.GetInt(selectedCharacterDataName, 0);
 
@@ -62,30 +58,36 @@ public class CharacterSelectionMenu : MonoBehaviour
         playerObjects[selectedCharacter].SetActive(true);
     }
 
-    public void StartGame()
+    public void  StartGame()
     {
         switch (GameControl.Difficulty)
         {
             case GameControl.Difficulties.Easy:
                 PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
-                SceneManager.LoadScene("Gameplay2");
                 PlayerController.playername = playername.text;
+                bl_SceneLoaderManager.LoadScene("Gameplay2");
                 break;
 
             case GameControl.Difficulties.Medium:
                 PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
-                SceneManager.LoadScene("Gameplay3");
                 PlayerController.playername = playername.text;
+                bl_SceneLoaderManager.LoadScene("Gameplay3");
                 break;
 
             case GameControl.Difficulties.Hard:
                 PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
-                SceneManager.LoadScene("Gameplay4");
                 PlayerController.playername = playername.text;
+                bl_SceneLoaderManager.LoadScene("Gameplay4");
                 break;
         }
         
         
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("Main Menu");
+
     }
 
     #region Difficulty
