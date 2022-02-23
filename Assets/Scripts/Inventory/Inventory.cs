@@ -9,8 +9,7 @@ public enum ItemCategory { Items }
 public class Inventory : MonoBehaviour, ISavable
 {
     [SerializeField] List<ItemSlot> slots;
-    [SerializeField] List<ItemSlot> pokeballSlots;
-    [SerializeField] List<ItemSlot> tmSlots;
+    
 
     List<List<ItemSlot>> allSlots;
 
@@ -20,14 +19,14 @@ public class Inventory : MonoBehaviour, ISavable
 
     private void Awake()
     {
-        allSlots = new List<List<ItemSlot>>() { slots, pokeballSlots, tmSlots };
+        allSlots = new List<List<ItemSlot>>() { slots };
     }
 
     //Categorize Items
     public static List<string> ItemCategories { get; set; } = new List<string>()
     {
         
-        "ITEMS", "POKEBALLS", "TM & HMs"
+        "ITEMS"
     };
 
     public List<ItemSlot> GetSlotsByCategory(int categoryIndex)
@@ -106,8 +105,7 @@ public class Inventory : MonoBehaviour, ISavable
         {
             //converting list of item slot to list of item save data
             items = slots.Select(i => i.GetSaveData()).ToList(),
-            pokeballs = pokeballSlots.Select(i => i.GetSaveData()).ToList(),
-            tms = tmSlots.Select(i => i.GetSaveData()).ToList(),
+            
 
         };
 
@@ -119,8 +117,7 @@ public class Inventory : MonoBehaviour, ISavable
     {
         var saveData = state as InventorySaveData;
         slots = saveData.items.Select(i => new ItemSlot(i)).ToList();
-        pokeballSlots = saveData.pokeballs.Select(i => new ItemSlot(i)).ToList();
-        tmSlots = saveData.tms.Select(i => new ItemSlot(i)).ToList();
+       
 
         allSlots = new List<List<ItemSlot>>() { slots }; //pokeballSlots, tmSlots };
         OnUpdated?.Invoke();

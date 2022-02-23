@@ -6,11 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    IEnumerator Start()
-    {
-        LoadGame();
-        yield return null;
-    }
+    [SerializeField] GameObject PanelHowto;
+    [SerializeField] GameObject PanelAbout;
+    [SerializeField] GameObject PanelCredits;
 
     public void PlayGame()
     {
@@ -33,5 +31,19 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public void About()
+    {
+        PanelAbout.SetActive(true);
+    }
+    public void Credits()
+    {
+        PanelCredits.SetActive(true);
+    }
+
+    public void ClosePanel()
+    {
+        PanelAbout.SetActive(false);
+        PanelCredits.SetActive(false);
     }
 }
