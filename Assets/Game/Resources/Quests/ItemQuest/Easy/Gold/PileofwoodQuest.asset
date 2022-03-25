@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: PileofwoodQuest
+  m_EditorClassIdentifier: 
+  name: PileofwoodQuest
+  description: Pile of wood Quest
+  startDialogue:
+    lines:
+    - We are going to have a school camping later this week
+  inProgressDialogue:
+    lines:
+    - Can you ask Alexander on what will we need in that occasion?
+  completedDialogue:
+    lines:
+    - Did you know?
+    - Trees are tall plants made of wood.
+    - Looking for it is a hard work. Isn't it?
+    - Thank you for help us
+  requiredItem: {fileID: 11400000, guid: 5940d5dd7c380e946913eebe40a06a40, type: 2}
+  rewardItem: {fileID: 11400000, guid: ac1eadc7223aedc42a9c09f35cc0e010, type: 2}

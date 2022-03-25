@@ -4,15 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum ItemCategory { Items }
+public enum ItemCategory { Items}
 
 public class Inventory : MonoBehaviour, ISavable
 {
     [SerializeField] List<ItemSlot> slots;
-    
-
     List<List<ItemSlot>> allSlots;
-
+   
     public event Action OnUpdated;
  
     
@@ -20,6 +18,7 @@ public class Inventory : MonoBehaviour, ISavable
     private void Awake()
     {
         allSlots = new List<List<ItemSlot>>() { slots };
+       
     }
 
     //Categorize Items
@@ -33,6 +32,7 @@ public class Inventory : MonoBehaviour, ISavable
     {
         return allSlots[categoryIndex];
     }
+
 
     public ItemBase GetItem(int itemIndex, int categoryIndex)
     {
@@ -64,6 +64,7 @@ public class Inventory : MonoBehaviour, ISavable
         OnUpdated?.Invoke();
     }
 
+
     public void RemoveItem(ItemBase item)
     {
         int category = (int)GetCategoryFromItem(item);
@@ -87,11 +88,9 @@ public class Inventory : MonoBehaviour, ISavable
 
     ItemCategory GetCategoryFromItem(ItemBase item)
     {
-        //if (item is RecoveryItem)
             return ItemCategory.Items;
 
-        //else 
-          //  return ItemCategory.Items;
+       
     }
 
     public static Inventory GetInventory()
@@ -119,8 +118,7 @@ public class Inventory : MonoBehaviour, ISavable
         slots = saveData.items.Select(i => new ItemSlot(i)).ToList();
        
 
-        allSlots = new List<List<ItemSlot>>() { slots }; //pokeballSlots, tmSlots };
-        OnUpdated?.Invoke();
+        allSlots = new List<List<ItemSlot>>() { slots };
     }
 }
 
@@ -170,6 +168,7 @@ public class ItemSlot
     }
 }
 
+
 [Serializable]
 public class ItemSaveData
 {
@@ -181,7 +180,8 @@ public class ItemSaveData
 public class InventorySaveData
 {
     public List<ItemSaveData> items;
-    public List<ItemSaveData> pokeballs;
-    public List<ItemSaveData> tms;
+   
 
 }
+
+

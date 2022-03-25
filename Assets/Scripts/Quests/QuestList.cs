@@ -6,17 +6,20 @@ using UnityEngine;
 
 public class QuestList : MonoBehaviour, ISavable
 {
-    List<Quest> quests = new List<Quest>();
-
+    [SerializeField]List<Quest> quests = new List<Quest>();
+    
     public event Action OnUpdated;
+    
 
-    public void AddQuest(Quest quest)
+    public void AddQuest(Quest quest, int count=1)
     {
+      
         if (!quests.Contains(quest))
             quests.Add(quest);
-
+        
         OnUpdated?.Invoke();
     }
+
     public bool IsStarted(string questName)
     {
         var questStatus = quests.FirstOrDefault(q => q.Base.Name == questName)?.Status;
@@ -28,9 +31,12 @@ public class QuestList : MonoBehaviour, ISavable
         var questStatus = quests.FirstOrDefault(q => q.Base.Name == questName)?.Status;
         return questStatus == QuestStatus.Completed;
     }
+
+
     public static QuestList GetQuestList()
     {
         return FindObjectOfType<PlayerController>().GetComponent<QuestList>();
+
     }
 
     public object CaptureState()
@@ -47,4 +53,10 @@ public class QuestList : MonoBehaviour, ISavable
             OnUpdated?.Invoke();
         }
     }
+
+    
+
 }
+
+
+

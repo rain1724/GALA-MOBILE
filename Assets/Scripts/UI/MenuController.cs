@@ -14,13 +14,16 @@ public class MenuController : MonoBehaviour
     [SerializeField] GameObject inventoryUI;
     [SerializeField] GameObject menuButtonClose;
     [SerializeField] GameObject menuButtonOpen;
-    [SerializeField] GameObject Map;
+    [SerializeField] GameObject QuestUI;
     [SerializeField] GameObject MenuAction;
     [SerializeField] GameObject MenuYes;
     [SerializeField] GameObject MenuNo;
+    [SerializeField] GameObject PopupSaved;
+    [SerializeField] GameObject PopupLoaded;
 
 
 
+    private int currentSceneIndex;
     public event Action<int> onMenuSelected;
     public event Action onBack;
 
@@ -48,8 +51,10 @@ public class MenuController : MonoBehaviour
         menu.SetActive(false);
         menuButtonClose.SetActive(false);
         menuButtonOpen.SetActive(true);
-        Map.gameObject.SetActive(false);
- 
+        QuestUI.gameObject.SetActive(false);
+        PopupSaved.gameObject.SetActive(false);
+        PopupLoaded.gameObject.SetActive(false);
+
     }
 
 
@@ -71,6 +76,10 @@ public class MenuController : MonoBehaviour
         {
 
             SavingSystem.i.Save("saveSlot1");
+            currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt("SavedScene", currentSceneIndex);
+            PopupSaved.gameObject.SetActive(true);
+            
             
 
 
@@ -86,6 +95,7 @@ public class MenuController : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("menu-load"))
         {
             SavingSystem.i.Load("saveSlot1");
+            PopupLoaded.gameObject.SetActive(true);
 
             /*MenuAction.gameObject.SetActive(true);
             if (CrossPlatformInputManager.GetButtonDown("menu-yes"))
@@ -101,9 +111,9 @@ public class MenuController : MonoBehaviour
 
         }
 
-        if (CrossPlatformInputManager.GetButtonDown("menu-map"))
+        if (CrossPlatformInputManager.GetButtonDown("menu-quest"))
         {
-            Map.gameObject.SetActive(true);
+            QuestUI.gameObject.SetActive(true);
             menuButtonClose.SetActive(true);
             state = GameState.Map;
 
@@ -143,12 +153,12 @@ public class MenuController : MonoBehaviour
         /*if (CrossPlatformInputManager.GetButtonDown("interact"))
         {
             onMenuSelected?.Invoke(selectedItem);
-        }
+        }*/
         else if (Input.GetKeyDown(KeyCode.X))
         {
             onBack?.Invoke();
             CloseMenu();
-        }*/
+        }
 
 
 

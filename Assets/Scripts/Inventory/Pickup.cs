@@ -23,7 +23,7 @@ public class Pickup : MonoBehaviour, Interactable, ISavable
 
             string playerName = initiator.GetComponent<PlayerController>().Name;
 
-            yield return DialogManager.Instance.ShowDialogText($"{playerName} Found {item.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{playerName} acquired {item.Name}");
 
         }
     }

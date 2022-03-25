@@ -52,7 +52,7 @@ public class Quest
 
         if (Base.RequiredItem != null)
         {
-           inventory.RemoveItem(Base.RequiredItem);
+            inventory.RemoveItem(Base.RequiredItem);
         }
 
         if (Base.RewardItem != null)
@@ -87,4 +87,3 @@ public class QuestSaveData
 }
 
 public enum QuestStatus { None, Started, Completed }
-

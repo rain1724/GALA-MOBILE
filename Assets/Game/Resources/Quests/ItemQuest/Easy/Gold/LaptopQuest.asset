@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: LaptopQuest
+  m_EditorClassIdentifier: 
+  name: LaptopQuest
+  description: Laptop Quest
+  startDialogue:
+    lines:
+    - i have presentation later in the library.
+    - But I forgot to bring something that needs
+    - electrical energy to function
+  inProgressDialogue:
+    lines:
+    - Maybe you can ask Teacher Marco to lend me something like that.
+  completedDialogue:
+    lines:
+    - Thank you so much!
+    - 'Fun Fact: Heat, light, motion, electrical, chemical, nuclear and gravity are
+      forms of energy.'
+  requiredItem: {fileID: 11400000, guid: 17c0c78406b7e124c819a4e66d4eeb79, type: 2}
+  rewardItem: {fileID: 11400000, guid: ac1eadc7223aedc42a9c09f35cc0e010, type: 2}

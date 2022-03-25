@@ -31,38 +31,38 @@ EditorBuildSettings:
     guid: 6650fe507ee13484a99c490a76691638
   - enabled: 1
     path: Assets/Scenes/Medium/Gameplay3.unity
-    guid: fc4dbe8ba2bce944c931c9dce458ebf5
+    guid: e218858bf400ee04eaeaa29a5b6b4c95
   - enabled: 1
     path: Assets/Scenes/Medium/Homebase3.unity
-    guid: 245b2f9235caa494f8f9ec29561eb98e
+    guid: e0e4dcca3bb0a85469314e19f730fb04
   - enabled: 1
     path: Assets/Scenes/Medium/HomeBedroom3.unity
-    guid: dd556eacc6bd40a4bbfc44d7945555cf
+    guid: 35e825dba432ea44a8f02b90730eccb2
   - enabled: 1
     path: Assets/Scenes/Medium/School Classroom3.unity
-    guid: bd3fd9bd9dc391b45a66f6ff05bb06a0
+    guid: fc345274ac77c4b42b3908fbb5930225
   - enabled: 1
     path: Assets/Scenes/Medium/School Interior3.unity
-    guid: c0185d6394260804fa3bd21fe940ec10
+    guid: 0efa7d38a4e17bd4296345eb3c3c8204
   - enabled: 1
     path: Assets/Scenes/Medium/School-Grounds3.unity
-    guid: 8144f1a375f543a45a2239df9179bc0f
+    guid: c29e3ec35c28e7d4da67ccdd32cba212
   - enabled: 1
     path: Assets/Scenes/Hard/Gameplay4.unity
-    guid: f4ccc32921794e84f895072f28509be9
+    guid: 7da5e3a1d36d9484c8010a4a40cf6496
   - enabled: 1
     path: Assets/Scenes/Hard/Homebase4.unity
-    guid: ae9d55c1f4a43a1409e6372c95a39630
+    guid: b1925d442b475b243b5de4c7599bf6e0
   - enabled: 1
     path: Assets/Scenes/Hard/HomeBedroom4.unity
-    guid: a4b0580d352a1384ab58a415fb910f32
+    guid: faadf6f8ad0557c46b60c4899aea89d3
   - enabled: 1
     path: Assets/Scenes/Hard/School Classroom4.unity
-    guid: f8fa699def90c78409226db7066e5b08
+    guid: c51206a46bd19404a8b41fd756629971
   - enabled: 1
     path: Assets/Scenes/Hard/School Interior4.unity
-    guid: b296642d97e7abc4eb9e4cdfb388f648
+    guid: 70bef3f1ff7e42749bcb03630bcc8808
   - enabled: 1
     path: Assets/Scenes/Hard/School-Grounds4.unity
-    guid: 167291a92da2d164d82e2e7e773da103
+    guid: 71ac2fefb4b51054bad43d7dbb5a623e
   m_configObjects: {}

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: RootQuests
+  m_EditorClassIdentifier: 
+  name: RootQuests
+  description: Root Quests
+  startDialogue:
+    lines:
+    - For you to get the fourth silver medal.
+    - I want you to search outside and
+    - 'look for one of the part of the tree '
+    - that absorbs nutrients
+  inProgressDialogue:
+    lines:
+    - Look for the guard to help you
+  completedDialogue:
+    lines:
+    - Its just a small roots, but
+    - I appreciate your efforts to dig it up.
+    - I just wanted to show it to you and
+    - to your classmates on what it looks like.
+    - Thank you.
+  requiredItem: {fileID: 11400000, guid: f42ef12dac110624d9d709a545940dd9, type: 2}
+  rewardItem: {fileID: 11400000, guid: 9be43b1a7afc8c44490a171df71650ae, type: 2}

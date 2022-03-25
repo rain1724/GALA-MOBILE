@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: LeafQuest
+  m_EditorClassIdentifier: 
+  name: LeafQuest
+  description: Leaf Quest
+  startDialogue:
+    lines:
+    - By the way, I'm going to teach
+    - about the parts of the plant.
+    - and I need a picture to show it to the class.
+  inProgressDialogue:
+    lines:
+    - You can ask Jacob to help you.
+  completedDialogue:
+    lines:
+    - Leaves require sunlight, water, chlorophyl and
+    - carbon dioxide to make food for themselves
+    - Thanks for picking it up
+  requiredItem: {fileID: 11400000, guid: 211199de467650c4699de8ea21e7de5e, type: 2}
+  rewardItem: {fileID: 11400000, guid: 9be43b1a7afc8c44490a171df71650ae, type: 2}

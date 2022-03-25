@@ -80,7 +80,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pocket
+  m_Text: Logs
 --- !u!1 &2366487990582561735
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6380043380230990708}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9373307
+  m_Size: 0.93060714
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -400,7 +400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4927801511150397535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -574,8 +574,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -128.4, y: -9.132111}
-  m_SizeDelta: {x: 205, y: -81.4639}
+  m_AnchoredPosition: {x: -225.45, y: -7.882}
+  m_SizeDelta: {x: 399.1, y: -83.964}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1090929091070282925
 CanvasRenderer:
@@ -938,7 +938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8344426417407554518
 RectTransform:
   m_ObjectHideFlags: 0

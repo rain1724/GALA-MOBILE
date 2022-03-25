@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: HeartQuest
+  m_EditorClassIdentifier: 
+  name: HeartQuest
+  description: Find an image of human heart
+  startDialogue:
+    lines:
+    - Did you say hi to Angel?
+    - If you want to be one of the top students,
+    - you need to excel.
+    - Study hard and earn recognition!
+    - Let's start your journey to be a better student!
+  inProgressDialogue:
+    lines:
+    - I heard that last time other students
+    - broke the heart figurine in the library.
+    - So, Ms. Carla the Librarian
+    - put it in a glass box for the meantime.
+    - Can you pick it up for me,
+    - so I can use it in our class?
+  completedDialogue:
+    lines:
+    - Great! You found it!
+    - I can start the discussion now.
+    - Did you know that the size of the heart
+    - ' is about the size of a person''s fist?'
+  requiredItem: {fileID: 11400000, guid: 4bd1cbe8329b605478a61a70caff9d96, type: 2}
+  rewardItem: {fileID: 11400000, guid: 796181645bbc3614a893e2e577e96c50, type: 2}

@@ -76,8 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
-  worldCamera: {fileID: 0}
   inventoryUI: {fileID: 0}
+  DifficultyToggles: {fileID: 0}
 --- !u!114 &1595426972470991493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,8 +91,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 0}
+  choiceBox: {fileID: 0}
   dialogText: {fileID: 0}
-  lettersPerSecond: 45
+  lettersPerSecond: 10
 --- !u!114 &6917773222177282404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +110,7 @@ MonoBehaviour:
   inventoryUI: {fileID: 0}
   menuButtonClose: {fileID: 0}
   menuButtonOpen: {fileID: 0}
-  Map: {fileID: 0}
+  QuestUI: {fileID: 0}
   MenuAction: {fileID: 0}
   MenuYes: {fileID: 0}
   MenuNo: {fileID: 0}

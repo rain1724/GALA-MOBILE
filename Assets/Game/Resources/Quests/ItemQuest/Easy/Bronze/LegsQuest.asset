@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: LegsQuest
+  m_EditorClassIdentifier: 
+  name: LegsQuest
+  description: Find an image of Legs
+  startDialogue:
+    lines:
+    - For your next task
+    - 'Find an image part of our body that helps us to run and walk. '
+  inProgressDialogue:
+    lines:
+    - Find Kyla and talk to her and ask for help.
+  completedDialogue:
+    lines:
+    - Great! Nice job!
+    - Don't worry there is no ghost in here.
+    - I only misplaced this Leg figurine a while ago.
+    - Did you know?
+    - 'The legs are the two lower limbs of the body. '
+    - They provide support and a range of movements.
+  requiredItem: {fileID: 11400000, guid: 51382c31c8d476a4f951775b890cbdd0, type: 2}
+  rewardItem: {fileID: 11400000, guid: 796181645bbc3614a893e2e577e96c50, type: 2}

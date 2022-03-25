@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: SunQuest2
+  m_EditorClassIdentifier: 
+  name: SunQuest2
+  description: Sun Quest
+  startDialogue:
+    lines:
+    - 'The Sun is located in the center of the Solar System. '
+    - It is a nearly perfect sphere of hot plasma, essentially, a hot ball of glowing
+      gases.
+  inProgressDialogue:
+    lines:
+    - Can you find an image of sun?
+  completedDialogue:
+    lines:
+    - Wow Great!
+    - Did you know?
+    - The Sun is approximately 4.6 billion years old.
+    - Congratulations on completing the task
+    - I hope you learned something in our activities.
+  requiredItem: {fileID: 11400000, guid: 22a2c27d47672fc4cb193f8cf89073db, type: 2}
+  rewardItem: {fileID: 11400000, guid: 796181645bbc3614a893e2e577e96c50, type: 2}

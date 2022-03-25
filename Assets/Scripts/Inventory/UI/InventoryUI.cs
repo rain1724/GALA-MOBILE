@@ -69,7 +69,7 @@ public class InventoryUI : MonoBehaviour
     public void HandleUpdate(Action onBack)
     {
         if (state == InventoryUIState.ItemSelection)
-        {
+       {
             int prevSelection = selectedItem;
             int prevCategory = selectedCategory;
 
@@ -125,9 +125,9 @@ public class InventoryUI : MonoBehaviour
 
         if (slots.Count > 0)
         {
-            var item = slots[selectedItem].Item;
-            itemIcon.sprite = item.Icon;
-            itemDescription.text = item.Description;
+           var item = slots[selectedItem].Item;
+           itemIcon.sprite = item.Icon;
+           itemDescription.text = item.Description;
         }
         HandleScrolling();
 

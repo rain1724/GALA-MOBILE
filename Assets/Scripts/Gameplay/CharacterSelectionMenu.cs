@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 public class CharacterSelectionMenu : MonoBehaviour
 {
@@ -12,19 +13,23 @@ public class CharacterSelectionMenu : MonoBehaviour
     public int selectedCharacter = 0;
 
     public InputField playername;
+    public GameObject NameValidation;
+    public Text ProfanityValidation;
+    public TextAsset textAssetBlockList;
+    [SerializeField] string[] strBlockList;
+
     private string selectedCharacterDataName = "SelectedCharacter";
 
-    Fader fader;
     void Start()
     {
         HideAllCharacters();
-        fader = FindObjectOfType<Fader>();
-
+        
         selectedCharacter = PlayerPrefs.GetInt(selectedCharacterDataName, 0);
 
         playerObjects[selectedCharacter].SetActive(true);
 
         DifficultyToggles.transform.GetChild((int)GameControl.Difficulty).GetComponent<Toggle>().isOn = true;
+        strBlockList = textAssetBlockList.text.Split(new string[] { ",", "\n" }, System.StringSplitOptions.RemoveEmptyEntries);
     }
 
 
@@ -57,31 +62,73 @@ public class CharacterSelectionMenu : MonoBehaviour
         }
         playerObjects[selectedCharacter].SetActive(true);
     }
+    string ProfanityCheck(string strToCheck)
+    {
+        for (int i = 0; i < strBlockList.Length; i++)
+        {
+            string profanity = strBlockList[i];
+            System.Text.RegularExpressions.Regex word = new Regex("" + profanity + "");
+            if (strBlockList[i].Contains(profanity))
+            {
+                string temp = word.Replace(strToCheck, "Bad Words/Names not Allowed");
+                strToCheck = temp;
+            }
+        }
+        return strToCheck;
+    }
+
+    public void Checkinput()
+    {
+        ProfanityValidation.text = ProfanityCheck(playername.text);
+        
+        if (ProfanityValidation.text.Contains("Bad Words/Names not Allowed"))
+        {
+            playername.text = "";
+        }
+
+        else
+        {
+            ProfanityValidation.text = "";
+            StartGame();
+        }
+    }
+
 
     public void  StartGame()
     {
-        switch (GameControl.Difficulty)
+
+        string Playername = playername.text;
+        if (!string.IsNullOrWhiteSpace(Playername)) 
         {
-            case GameControl.Difficulties.Easy:
-                PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
-                PlayerController.playername = playername.text;
-                bl_SceneLoaderManager.LoadScene("Gameplay2");
-                break;
+            NameValidation.SetActive(false);
+            switch (GameControl.Difficulty)
+            {
 
-            case GameControl.Difficulties.Medium:
-                PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
-                PlayerController.playername = playername.text;
-                bl_SceneLoaderManager.LoadScene("Gameplay3");
-                break;
+                case GameControl.Difficulties.Easy:
+                    PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
+                    PlayerController.playername = playername.text;
+                    bl_SceneLoaderManager.LoadScene("Gameplay2");
+                    break;
 
-            case GameControl.Difficulties.Hard:
-                PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
-                PlayerController.playername = playername.text;
-                bl_SceneLoaderManager.LoadScene("Gameplay4");
-                break;
+                case GameControl.Difficulties.Medium:
+                    PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
+                    PlayerController.playername = playername.text;
+                    bl_SceneLoaderManager.LoadScene("Gameplay3");
+                    break;
+
+                case GameControl.Difficulties.Hard:
+                    PlayerPrefs.SetInt(selectedCharacterDataName, selectedCharacter);
+                    PlayerController.playername = playername.text;
+                    bl_SceneLoaderManager.LoadScene("Gameplay4");
+                    break;
+            }
         }
-        
-        
+        else
+        {
+            NameValidation.SetActive(true);
+        }
+
+
     }
 
     public void Back()

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: RockQuest
+  m_EditorClassIdentifier: 
+  name: RockQuest
+  description: Rock Quest
+  startDialogue:
+    lines:
+    - Earning medals while learning is fun right?
+    - it is really MATTER if you find something solid
+    - For us to start discussing about matter
+  inProgressDialogue:
+    lines:
+    - 'Hint: Its lying on the ground near the tree. '
+  completedDialogue:
+    lines:
+    - Solid is the state in which matter
+    - maintains a fixed volume and shape.
+    - The one you gave me is an example of a solid object.
+    - Great you completed the five silver medals!
+    - You can now move on to earn gold medals.
+  requiredItem: {fileID: 11400000, guid: 987787ed0ff43074c931541343b3fb61, type: 2}
+  rewardItem: {fileID: 11400000, guid: 9be43b1a7afc8c44490a171df71650ae, type: 2}

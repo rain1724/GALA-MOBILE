@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: TongueQuest
+  m_EditorClassIdentifier: 
+  name: TongueQuest
+  description: Tongue Quest
+  startDialogue:
+    lines:
+    - Can you find the image part of our body?
+    - 'that helps us to know the taste of the food. '
+  inProgressDialogue:
+    lines:
+    - 'Hint: You can taste all the breads in there.'
+  completedDialogue:
+    lines:
+    - Nice! Good Job for finding it.
+    - Can you say this?
+    - I scream, you scream, we all scream for ice cream!
+    - I scream, you scream, we all scream for ice cream!
+  requiredItem: {fileID: 11400000, guid: 4e4021b9eb5582c4e8880514f78cd12b, type: 2}
+  rewardItem: {fileID: 11400000, guid: 796181645bbc3614a893e2e577e96c50, type: 2}

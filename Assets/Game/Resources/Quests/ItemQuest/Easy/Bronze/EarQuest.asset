@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: EarQuest
+  m_EditorClassIdentifier: 
+  name: EarQuest
+  description: Ear Quest
+  startDialogue:
+    lines:
+    - Can you find the image of the part of our body?
+  inProgressDialogue:
+    lines:
+    - 'Hint: It helps us to hear the sounds'
+    - Ask Daniel for help.
+  completedDialogue:
+    lines:
+    - Good job!
+    - Did you Know?
+    - 'Your ears never stop hearing, even during sleep. '
+    - Your brain just chooses to ignore sounds and vibrations.
+  requiredItem: {fileID: 11400000, guid: 2af3f60d7e5b5934eae4eecc3c045f7b, type: 2}
+  rewardItem: {fileID: 11400000, guid: 796181645bbc3614a893e2e577e96c50, type: 2}

@@ -154,10 +154,11 @@ MonoBehaviour:
   questToStart: {fileID: 0}
   questToComplete: {fileID: 0}
   movementPattern:
-  - {x: 2, y: 0}
+  - {x: 0, y: 2}
+  - {x: 0, y: -2}
   - {x: -2, y: 0}
-  - {x: 0, y: 1}
-  timeBetweenPattern: 2
+  - {x: 2, y: 0}
+  timeBetweenPattern: 5
 --- !u!114 &2510509875591699977
 MonoBehaviour:
   m_ObjectHideFlags: 0

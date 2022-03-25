@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: EnergyQuest
+  m_EditorClassIdentifier: 
+  name: EnergyQuest
+  description: Energy Quest
+  startDialogue:
+    lines:
+    - Now for final Question on this level
+  inProgressDialogue:
+    lines:
+    - 'a quantity that describes the capacity to do work; '
+    - a source of usable power
+  completedDialogue:
+    lines:
+    - Well done student
+  requiredItem: {fileID: 11400000, guid: 2ce5e3b11d46ba94ab9018c213ad6851, type: 2}
+  rewardItem: {fileID: 11400000, guid: 796181645bbc3614a893e2e577e96c50, type: 2}

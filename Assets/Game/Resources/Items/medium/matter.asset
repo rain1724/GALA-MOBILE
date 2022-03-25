@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963df24251be8e0498d1cf7ca3fcca99, type: 3}
+  m_Name: matter
+  m_EditorClassIdentifier: 
+  name: matter
+  description: matter
+  icon: {fileID: -1638476818528599279, guid: 926313f27fcbe91428627806d4c1ff50, type: 3}

@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject PanelAbout;
     [SerializeField] GameObject PanelCredits;
 
+    private int sceneToContinue;
+
     public void PlayGame()
     {
         SceneManager.LoadScene("CharacterSelection");
@@ -24,8 +26,19 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
+        sceneToContinue = PlayerPrefs.GetInt("SavedScene");
+
+        if (sceneToContinue != null)
+        {
+            bl_SceneLoaderManager.LoadScene("saveSlot1");
+            
+            SceneManager.LoadScene(sceneToContinue);
+            SavingSystem.i.Load("saveSlot1");
+        }
+        else
+            return;
         
-        SavingSystem.i.Load("saveSlot1");
+        
     }
 
     public void QuitGame()

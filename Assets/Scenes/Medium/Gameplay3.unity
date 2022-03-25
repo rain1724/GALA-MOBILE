@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7725768716618746412, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7725768716618746412, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: m_LocalPosition.x
@@ -380,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725768716618746414, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7725768716618746414, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -389,7 +389,7 @@ PrefabInstance:
     - target: {fileID: 7725768716618746414, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: connectedScenes.Array.data[1]
       value: 
-      objectReference: {fileID: 354794162}
+      objectReference: {fileID: 715767245}
     - target: {fileID: 7725768716618746414, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: connectedScenes.Array.data[2]
       value: 
@@ -456,7 +456,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7725768716618746412, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7725768716618746412, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: m_LocalPosition.x
@@ -520,7 +520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725768716618746414, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7725768716618746414, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: connectedScenes.Array.data[0]
@@ -533,7 +533,7 @@ PrefabInstance:
     - target: {fileID: 7725768716618746414, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: connectedScenes.Array.data[2]
       value: 
-      objectReference: {fileID: 1970949093}
+      objectReference: {fileID: 858661407}
     - target: {fileID: 7725768716618746415, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: m_Name
       value: School-Grounds3
@@ -675,12 +675,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725768716618746414, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: connectedScenes.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7725768716618746414, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: connectedScenes.Array.data[0]
       value: 
       objectReference: {fileID: 1970949093}
+    - target: {fileID: 7725768716618746414, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
+      propertyPath: connectedScenes.Array.data[1]
+      value: 
+      objectReference: {fileID: 715767245}
     - target: {fileID: 7725768716618746415, guid: 65469675d9d2abc428a4a3ac6f7cfa16, type: 3}
       propertyPath: m_Name
       value: HomeBedroom3

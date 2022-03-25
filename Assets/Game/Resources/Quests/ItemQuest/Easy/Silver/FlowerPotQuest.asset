@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: FlowerPotQuest
+  m_EditorClassIdentifier: 
+  name: FlowerPotQuest
+  description: Flower Pot Quest
+  startDialogue:
+    lines:
+    - Can you run an errand for me?
+  inProgressDialogue:
+    lines:
+    - The Principal like arranging flowers.
+    - He says that he's going to give me one today.
+    - Can you get it for me?
+  completedDialogue:
+    lines:
+    - Nice! Thank you!
+    - It's going to be a pretty decoration in our classroom
+  requiredItem: {fileID: 11400000, guid: bfaac254f604dbc428d59e37cb8dbf8f, type: 2}
+  rewardItem: {fileID: 11400000, guid: 9be43b1a7afc8c44490a171df71650ae, type: 2}

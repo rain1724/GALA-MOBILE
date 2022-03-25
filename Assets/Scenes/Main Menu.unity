@@ -209,29 +209,29 @@ MonoBehaviour:
     floor with hole by Tuomo Untinen\n= Wooden wall topping (CC-BY-SA) =\n * Tuomo
     Untinen\n= Pile of barrels =\n * Based LPC base tiles by Lanea Zimmerman (AKA
     Sharm)\n= Decorational stuff (CC-BY-SA) =\n * Green bottle\n * Wine glass and
-    bottle\n * Hanging sacks\n * Wall mounted rope and ropes\n * Wall mounted swords\n
-    * Wall mounted kite shield\n * Wall hole\n By Tuomo Untinen\n * Small sack from
+    bottle\n * Hanging sacks\n * Wall mounted rope and ropes\n * Wall mounted swords\n*
+    Wall mounted kite shield\n * Wall hole\n By Tuomo Untinen\n * Small sack from
     LPC farming tileset by Daniel Eddeland (http://opengameart.org/content/lpc- farming-tilesets-magic-animations-and-ui-elements)
     \n * Purple bottles and gray lantern from Hyptosis Mage city\n * Green and blue
-    bottle by Tuomo Untinen\n= Wall clock (CC-BY-SA) =\n * Lanea Zimmerman AKA Sharm\n
-    * Tuomo Untinen (Scaled down and animation)\n= Stone floor (CC-BY-SA)= \n * Tuomo
+    bottle by Tuomo Untinen\n= Wall clock (CC-BY-SA) =\n * Lanea Zimmerman AKA Sharm\n*
+    Tuomo Untinen (Scaled down and animation)\n= Stone floor (CC-BY-SA)= \n * Tuomo
     Untinen \n= Cobble stone floor (CC-BY-SA)= \n * Based on LPC base tileset by
     Lanea Zimmerman (AKA Sharm)\n= Cabinets and kitchen stuff including metal stove(CC-BY-SA)
     =\n * Based on LPC base tileset by Lanea Zimmerman (AKA Sharm)\n * Cutboard is
     made by Hyptosis\n * Sacks based on LPC farming tileset by Daniel Eddeland (http://opengameart.org/content/lpc-
-    farming-tilesets-magic-animations-and-ui-elements) \n * Spears by Tuomo Untinen\n
-    * Vertical chest by Tuomo Untinen based on LPC base tiles Lanea Zimmerman (AKA
-    Sharm)\nManuel Riecke (AKA MrBeast)\n= Skull (CC-BY-SA) =\n * http://opengameart.org/content/lpc-dungeon-elements\n
-    * Graphical artist Lanea Zimmerman AKA Sharm\n * Contributor William Thompson\n=
+    farming-tilesets-magic-animations-and-ui-elements) \n * Spears by Tuomo Untinen\n*
+    Vertical chest by Tuomo Untinen based on LPC base tiles Lanea Zimmerman (AKA
+    Sharm)\nManuel Riecke (AKA MrBeast)\n= Skull (CC-BY-SA) =\n * http://opengameart.org/content/lpc-dungeon-elements\n*
+    Graphical artist Lanea Zimmerman AKA Sharm\n * Contributor William Thompson\n=
     pile sacks =\n * LPC farming tileset by Daniel Eddeland (http://opengameart.org/content/lpc-
     farming-tilesets-magic-animations-and-ui-elements) \n= Pile of papers(CC-BY-SA)
     = \n * Based on caeles papers\n= Armor shelves(CC-BY-SA) =\n * Based on LPC base
     tileset by Lanea Zimmerman (AKA Sharm)\n * Armors by: Adapted by Matthew Krohn
     from art created by Johannes Sj\xF6lund\n= Table lamp =\n  * Tuomo Untinen\n=
-    Distiller =\n * Table is from LPC base tileset by Lanea Zimmerman (AKA Sharm)\n
-    * Distiller by Tuomo Untinen\n= Fireplace =\n * Tuomo Untinen\n * Inspired by
-    Lanea Zimmerman (AKA Sharm) Fireplace\n\n\"[LPC] Walls\" by bluecarrot16, Lanea
-    Zimmerman (Sharm), Daniel Armstrong (HughSpectrum), William Thompson (William.Thompsonj),
+    Distiller =\n * Table is from LPC base tileset by Lanea Zimmerman (AKA Sharm)\n*
+    Distiller by Tuomo Untinen\n= Fireplace =\n * Tuomo Untinen\n * Inspired by Lanea
+    Zimmerman (AKA Sharm) Fireplace\n\n\"[LPC] Walls\" by bluecarrot16, Lanea Zimmerman
+    (Sharm), Daniel Armstrong (HughSpectrum), William Thompson (William.Thompsonj),
     Hyptosis, Zabin, Daniel Cook, Guido Bos, SpiderDave, Cougarmint, Stephen Challener
     (Redshrike), Matthew Nash, Wolthera van H\xF6vell tot Westerflier (TheraHedwig),
     Reemax, bleutailfly, NaRNeRZz, Sir Spummington, Casper Nilsson, KnoblePersona.
@@ -455,7 +455,7 @@ RectTransform:
   - {fileID: 114910697}
   - {fileID: 1908573445}
   m_Father: {fileID: 791118887}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -895,7 +895,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Game
+  m_Text: Start Game
 --- !u!222 &234349752
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1090,7 +1090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &447746963
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1932,7 +1932,6 @@ RectTransform:
   - {fileID: 103486378}
   - {fileID: 680394251}
   - {fileID: 697330456}
-  - {fileID: 1301895970}
   - {fileID: 2133390333}
   - {fileID: 1907431662}
   - {fileID: 50501687}
@@ -2082,7 +2081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035, y: -373.09}
+  m_AnchoredPosition: {x: -0.000061035, y: -263.4}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1152122717
@@ -2178,218 +2177,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152122715}
-  m_CullTransparentMesh: 1
---- !u!1 &1277505296
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1277505297}
-  - component: {fileID: 1277505299}
-  - component: {fileID: 1277505298}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1277505297
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277505296}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1301895970}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.1900024, y: 0.9999695}
-  m_SizeDelta: {x: -3.61, y: -20.49}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1277505298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277505296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 9b6c0f42a5c74204b843f112deb4c588, type: 3}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 2
-    m_MaxSize: 35
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: How To Play
---- !u!222 &1277505299
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277505296}
-  m_CullTransparentMesh: 1
---- !u!1 &1301895969
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1301895970}
-  - component: {fileID: 1301895973}
-  - component: {fileID: 1301895972}
-  - component: {fileID: 1301895971}
-  m_Layer: 5
-  m_Name: HowTo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1301895970
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301895969}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1277505297}
-  m_Father: {fileID: 791118887}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -680, y: -109}
-  m_SizeDelta: {x: 247.45, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1301895971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301895969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1301895972}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 791118888}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1301895972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301895969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4e618ea1c2e22a944a1d320f1963dc9d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1301895973
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301895969}
   m_CullTransparentMesh: 1
 --- !u!1 &1479652216
 GameObject:
@@ -2875,7 +2662,7 @@ RectTransform:
   - {fileID: 1769263768}
   - {fileID: 1886045395}
   m_Father: {fileID: 791118887}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3321,7 +3108,7 @@ RectTransform:
   m_Children:
   - {fileID: 153575692}
   m_Father: {fileID: 791118887}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}

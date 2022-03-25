@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d883695dc25c2049b21dc5146843828, type: 3}
+  m_Name: MoonQuest
+  m_EditorClassIdentifier: 
+  name: MoonQuest
+  description: Moon Quest
+  startDialogue:
+    lines:
+    - We're going to discuss about something.
+    - It is the Earth's Only natural satellite.
+  inProgressDialogue:
+    lines:
+    - Can you go to Teacher Lia of Section 2?
+    - To borrow the model of it?
+  completedDialogue:
+    lines:
+    - Wow! Great Job!
+    - The moon is the Earth's only natural satellite
+    - And Did you know that there is water on the Moon?
+  requiredItem: {fileID: 11400000, guid: 5bdab002567828a43918a9ce7cbfe2ee, type: 2}
+  rewardItem: {fileID: 11400000, guid: 9be43b1a7afc8c44490a171df71650ae, type: 2}
